@@ -1,0 +1,290 @@
+<nav>
+	<div class="wrapper wrapper--flex">
+		<a href="#" class="col--two">
+			<%= image_tag 'logo.png', class:'logo-main'%>
+		</a>
+		<a href="#" class="main--toggle">
+			<span></span>
+		</a>
+		<ul class="wrapper--flex col--two menu--main">
+			<li><a href="#about">About</a></li>
+			<li><a href="#services">Services</a></li>
+			<li><a href="#contact">Contact</a></li>
+			<li><a href="#request">Request a Quote</a></li>
+		</ul>
+	</div>
+</nav>
+<header>
+	<div class=" wrapper">
+		<div class="header--text">
+			<h2>Welcome to</h2>
+			<h2 class="hl">Triumph Capital Limited</h2>
+			<h2>a Financial Technology</h2>
+			<h2>Advisory Firm</h2>
+		</div>
+	</div>
+	<a href=""><img src="" alt="arrow image"></a>
+</header>
+<section class="about" id="about">
+	<div class="wrapper">
+		<p class="text-primary">Triumph Capital is a Toronto-based firm that has over thirty years of experience providing personalized service and a unique, comprehensive look at the needs of its clients, both for today and the future.</p>
+	</div>
+	<div class="wrapper">
+		<div class="wrapper--flex">
+			<div class="col--two">
+				<%= image_tag 'investor-services-img.png'%>
+			</div>
+			<div class="col--two">
+				<h3>Investor Services</h3>
+				<p>Triumph Capital specializes in investment analysis, wealth management, retirement, and estate planning. We will provide you with comprehensive solutions for all of your investment planning needs.</p>
+			</div>
+		</div>
+		<div class="wrapper--flex">
+			<div class="col--two">
+				<%= image_tag 'phsp-img.png'%>
+			</div>
+			<div class="col--two">
+				<h3>PHSP/HSA</h3>
+				<p>If you are self employed or incorporated, we offer customized Private Health Service Plan and Health Spending Account services designed to help you maximize your savings on health and medical expenses. Lower your tax obligations and provide flexible, affordable, health benefits to yourself and your employees.</p>
+			</div>
+		</div>
+		<div class="wrapper--flex">
+			<div class="col--two">
+				<%= image_tag 'technology-img.png'%>
+			</div>
+			<div class="col--two">
+				<h3>Technology Development</h3>
+				<p>We are dedicated to developing cutting edge financial technology to deliver you better, faster, and more accurate services on demand and in real time. Stay tuned!</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="people">
+	<div class="wrapper">
+		<div class="wrapper--flex">
+			<div class="col--two">
+				<h2>Diana Dyer</h2>
+				<h4>President and CEO</h4>
+				<p>As the President and CEO of Triumph Capital Limited, Diana brings a depth and understanding of the financial services industry that is rarely seen in the marketplace today. Her passion for helping families make informed decisions about their financial needs has led her to become one of the most successful agents in her field. Diana holds a Diamond Club award for being listed as one of the top 30 brokers in Canada for more than 5 years and is the youngest broker to have ever received this award. Diana has been active in a number of charities and public outreach programs, most recently Motionball for the Special Olympics. Diana is known for her discretion and her ability to identify and address the needs of her clients, regardless of their situation. Her skillset allows her to excel and build lasting relationships built on mutual respect and a deeply rooted desire to help others accomplish their financial goals. Diana is the 2015 Notable.ca award winner in Finance</p>
+			</div>
+			<div class="col--two col--img">
+				<img src="https://unsplash.it/700/700/?random" alt="">
+			</div>
+		</div>
+		<div class="wrapper--flex">
+			<div class="col--two">
+				<h2>Noah Drabinsky</h2>
+				<h4>Executive Vice-President and COO</h4>
+				<p>Noah has been a financial adviser for over a decade. Throughout this time, he has developed a network of relationships across the financial industry, both in the United States and Canada, that allow him to provide unique advice and opportunities for clients across the economic spectrum. A focus on ethical investing and business practices is something he believes in and shapes the culture of the entire Triumph team. Noah's clients include small to mid-size owner managed businesses, public companies, and professional practices across Ontario. His strategies are known for incorporating creative risk management solutions, along with stable long-term results appropriate throughout a clients entire financial life. Constantly seeking new opportunities for private clients, he can often be found at financial conferences, speaking at corporate events, or at his desk buried under a pile of earnings reports.</p>
+			</div>
+			<div class="col--two col--img">
+				<img src="https://unsplash.it/700/700/?random" alt="">
+			</div>
+		</div>
+	</div>
+</section>
+<section class="social" id="social">
+	<div class="wrapper--flex tweet-flex">
+			<% @socials.each_with_index do |social, index| %>
+				<div class="social-element col--five">
+					<% if index.modulo(2).zero? %>
+						<% if social.present? %>
+							<div class="tweet">
+								<p ><%= Rinku.auto_link(social.text, :all, 'target="_blank"').html_safe %></p>
+							</div>
+						<% end %>
+					<% else %>
+						<% if social.present? %>
+							<div class="instagram" style="background-image: url(<%= social.image_url %>)">
+							</div>
+						<% end %>
+					<% end %>
+				</div>
+			<% end %>
+	</div>
+</section>
+<section class="services" id="services">
+	<div class="wrapper">
+		<h2>What We Do</h2>
+		<p class="text-secondary">Triumph Capital is a Toronto-based financial technology advisory firm that has over thirty years of experience providing individual and group wealth solutions to our clients.</p>
+		<div class="wrapper--flex">
+			<i class="fa fa-usd" aria-hidden="true"></i>
+			<div>
+				<h3>Wealth Management</h3>
+				<p>No matter at what stage of your life you are, whether it be making provision for the future, or making the best use of your assets to provide income in retirement, investment planning is crucially important.</p>
+			</div>
+		</div>
+		<div class="wrapper--flex">
+			<i class="fa fa-line-chart" aria-hidden="true"></i>
+			<div>
+				<h3>Millennial Investment Planning</h3>
+				<p>By using a customized set of investment vehicles designed specifically for young professionals, Triumph Capital specializes in helping young professionals eliminate debt, set goals and achieve financial success and freedom.</p>
+			</div>
+		</div>
+		<div class="wrapper--flex">
+			<i class="fa fa-briefcase" aria-hidden="true"></i>
+			<div>
+				<h3>Professional and Corporate Benefits</h3>
+				<p>We understand that different families and individuals have different needs, and have designed your private health care plans to allow you to choose both the type and amount of coverage you want.</p>
+			</div>
+		</div>
+		<div class="wrapper--flex">
+			<i class="fa fa-stethoscope" aria-hidden="true"></i>
+			<div>
+				<h3>Private Health Savings Plan</h3>
+				<p>Under section 20.01 of the Income Tax Act of Canada, the Triumph Capital Private Health Services Plan (PHSP) converts all of your eligible health and dental expenses into a deduction from your gross business income, giving you the opportunity to maximize your tax savings while having the same tax benefits as a large corporation.</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="contact" id="contact">
+	<div class="wrapper">
+		<div class="contact--info col--two">
+			<h2>Get In Touch</h2>
+			<div>
+				<p>Triumph Capital Limited</p>
+				<p>171 East Liberty Street Suite 272</p>
+				<p>Toronto, ON M6K 3P6</p>
+			</div>
+			<div>
+				<p>Phone: 647-345-0611</p>
+				<p>Toll Free: 1-888-315-7781</p>
+				<p>Fax: 1-888-315-7781</p>
+			</div>
+		</div>
+		<div class="contact--map">
+			
+		</div>
+	</div>
+</section>
+<section class="request" id="request">
+	<div class="wrapper">
+		<h2>Request a Quote</h2>
+		<form action="">
+			<div class="wrapper--flex">
+				<div class="col--two">
+					<label for="first_name">First Name</label>
+					<input type="text" id="first_name" name="first_name">
+				</div>
+				<div class="col--two">	
+					<label for="last_name">Last Name</label>
+					<input type="text" id="last_name" name="last_name">
+				</div>
+				<div class="col--two">
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email">
+				</div>
+				<div class="col--two">
+					<label for="phone">Phone Number</label>
+					<input type="text" id="phone" name="phone">
+				</div>
+			</div>
+			<label for="comments">Comments</label>
+			<textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+			<input type="submit" value="SUBMIT ▸" class="button button--primary">
+		</form>
+	</div>
+</section>
+<footer>
+	<div class="wrapper wrapper--flex">
+		<%= image_tag 'logo-2.png', class:'logo-footer'%>
+		<div>
+			<h3>Financial Advice for Today and For the Future.</h3>
+			<p>Copyright © 2016 Triumph Capital Limited. All Rights Reserved. Developed by Up At Five Triumph Capital Limited | 171 East Liberty Street Suite 272 Toronto, ON M6K 3P6 | (647) 345-0611 | 1-888-315-7781</p>
+		</div>
+		<div class="social-links">
+			<a href="https://www.facebook.com/WWFCanada/" target="_blank"><i class="fa fa-facebook"></i></a>
+			<a href="https://twitter.com/WWFCanada" target="_blank"><i class="fa fa-twitter"></i></a>
+			<a href="https://www.instagram.com/wwfcanada/" target="_blank"><i class="fa fa-instagram"></i></a>
+		</div>
+	</div>
+</footer>
+
+
+<script>
+	var windowSize = $(window).innerWidth();
+	(function($,sr){
+	  var debounce = function (func, threshold, execAsap) {
+	      var timeout;
+
+	      return function debounced () {
+	          var obj = this, args = arguments;
+	          function delayed () {
+	              if (!execAsap)
+	                  func.apply(obj, args);
+	              timeout = null;
+	          };
+
+	          if (timeout)
+	              clearTimeout(timeout);
+	          else if (execAsap)
+	              func.apply(obj, args);
+
+	          timeout = setTimeout(delayed, threshold || 100);
+	      };
+	  }
+	  // smartresize 
+	  jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+
+	})(jQuery,'smartresize');
+	
+	  $('a[href*="#"]:not([href="#"])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html, body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+
+	  $('input[type=text], input[type=email]').on('click', function(){
+	  	var label_name = $(this).attr('id')
+	  	var label = $("label[for='"+label_name+"']")
+	  	$(label).css('top', '-20px')
+
+	  });
+
+	  $('input[type=text], input[type=email]').on('blur', function(){
+	  	if($(this).val().length < 1){
+	  		var label_name = $(this).attr('id')
+	  		var label = $("label[for='"+label_name+"']")
+	  		$(label).css('top', '0')
+	  	}
+	  });
+
+	  $('.main--toggle').on('click', function(e){
+	  	e.preventDefault()
+	  	$(this).toggleClass('active');
+	  	$('.menu--main').slideToggle('normal')
+	  });
+	  $('.menu--main a').on('click', function(){
+	  	$('.main--toggle').toggleClass('active')
+	  	$('.menu--main').slideToggle('normal')
+	  	console.log('doing')
+	  });
+
+	  function mainMenuSmall(){
+	  	if(windowSize <= 959){
+	  		$('.menu--main').css('display', 'none');
+	  	}else{
+	  		$('.menu--main').css('display', 'flex')
+	  	}
+	  }
+
+	  var theWidth = $(window).width();
+	  $(window).smartresize(function(){
+	  	if($(this).width() != theWidth){
+	  		windowSize = $(window).innerWidth()
+	  		// mainMenu()
+	  		mainMenuSmall()
+	  		theWidth = $(this).width()
+	  	}
+	  });
+
+	  mainMenuSmall()
+	
+</script>

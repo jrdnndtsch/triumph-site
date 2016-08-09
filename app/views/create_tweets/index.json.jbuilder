@@ -1,0 +1,1 @@
+json.array! @create_tweets, partial: 'create_tweets/create_tweet', as: :create_tweet

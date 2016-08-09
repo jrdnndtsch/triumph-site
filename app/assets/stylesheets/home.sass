@@ -1,0 +1,583 @@
+@import 'variables'
+
+//generic styles
+
+html
+	:font-size 10px
+	:box-sizing border-box
+*, *:before, *:after
+	:box-sizing inherit	
+body
+	:font-family $body-font	
+	:font-size 1.5rem
+	:line-height 2.6rem
+	:margin 0
+img 
+	:width 100%
+//grid columns
+$grid-base: 40
+
+=make-column($columns, $grid: $grid-base)
+	:box-sizing border-box
+	:width percentage($columns / $grid)
+
+=make-gutter($left-gutter: 0, $right-gutter: 0, $grid: $grid-base)
+	:margin-left percentage($left-gutter / $grid)
+	:margin-right percentage($right-gutter / $grid)
+
+//adaptive screen sizes
+%make-adaptive
+	@media screen and (min-width: 1170px)
+		// XL
+		:width 1146px
+		:margin
+			:left 12px
+			:right 12px
+	@media screen and (min-width: 960px) and (max-width: 1169px)
+		// LG
+		:width 936px
+		:margin
+			:left 12px
+			:right 12px
+	@media screen and (min-width: 768px) and (max-width: 959px)
+		// MD
+		:width 744px
+		:margin
+			:left 12px
+			:right 12px
+	@media screen and (min-width: 500px) and (max-width: 767px)
+		// SM
+		:width 480px
+		:margin
+			:left 12px
+			:right 12px
+	@media screen and (max-width: 499px)
+		// XS
+		:width auto
+		:margin-left 8px
+		:margin-right 8px
+
+
+=display-for($size: false)
+	@each $screen in $size
+		@if $screen == xl
+			@media screen and (min-width: 1170px)
+				@content
+		@else if $screen == lg
+			@media screen and (min-width: 960px) and (max-width: 1169px)
+				@content
+		@if $screen == md
+			@media screen and (min-width: 768px) and (max-width: 959px)
+				@content
+		@else if $screen == sm
+			@media screen and (min-width: 500px) and (max-width: 767px)
+				@content
+		@else if $screen == xs
+			@media screen and (max-width: 499px)
+				@content
+
+.wrapper
+	@extend %make-adaptive
+	:box-sizing border-box
+	:position relative
+	+display-for(xl lg md sm)
+		:margin 0 auto
+	+display-for(xs)
+		:margin 0
+		:padding 0 12px
+	&--flex
+		:display flex
+		:align-items center
+		:justify-content space-between
+		:flex-flow row wrap
+.wrapper, .wrapper--flex
+	.col
+		&--two
+			+make-column(20)
+			+display-for(sm xs)
+				+make-column(40)	
+		&--four
+			+make-column(10)
+			+display-for(sm)
+				+make-column(20)
+			+display-for(xs)
+				+make-column(40)
+		&--five
+			+make-column(8)
+			+display-for(md)
+				+make-column(13.33)
+			+display-for(sm)
+				+make-column(13.33)
+			+display-for(xs)
+				+make-column(20)				
+
+section
+	:padding 140px 0	
+	+display-for(sm xs)
+		:padding 80px 0				
+
+//fonts stuff			
+h2, h3, h4 
+	:font-family $title-font
+	:font-weight normal
+h2 
+	:font-size 4rem	
+	:line-height 4.4rem	
+	+display-for(xs)
+		:font-size 3.2rem
+		:line-height 3.8rem
+h3 
+	:font-size 2.4rem	
+	:line-height 2.8rem
+	+display-for(xs)
+		:font-size 2.2rem
+		:line-height 2.4rem
+h4 
+	:font-size 1.8rem	
+	:line-height 2rem
+a 
+	:transition 0.3s all ease	
+
+.text-primary, .text-secondary 
+	:letter-spacing 0.4
+	:line-height 3.2rem
+	:font-size 1.85rem
+	:text-align center
+	:max-width 650px
+	:margin 0 auto
+.text-primary
+	:font-family $hl-font
+	:font-style italic
+h2.hl 
+	:color $gold
+	:font-weight bold	
+		
+.button
+	:border none
+	:padding 10px 12px 8px 12px
+	:transition 0.3s all ease
+	:cursor pointer
+	:font-family $title-font
+	:font-size 1.6rem
+	:letter-spacing 1.2px
+.button--primary
+	:border 2px solid $gold
+	:background $gold
+	:color white
+.button--primary:hover
+	:background white
+	:color $gold			
+// NAV
+.logo-main
+	:width 240px
+nav 
+	:background $purple
+	:padding 12px 0
+	// :position fixed
+	:width 100%
+	:z-index 10
+	.wrapper
+		+display-for(md sm xs)
+			:margin 0
+			:padding 0 20px 
+			:width 100%
+	a.col--two
+		+display-for(md sm xs)
+			:width 80% !important		
+	.menu--main
+		+display-for(md sm xs)
+			:display none	
+	
+	ul 
+		:list-style none
+		:padding 0
+		:margin 0
+		+display-for(md sm xs)
+			:position absolute
+			:background $purple
+			:top 55px
+			:margin 0
+			:padding 40px 0 20px
+			:width 100% !important
+			:left 0
+			:z-index 1
+		li 
+			+display-for(md sm xs)
+				:width 100%
+				:text-align center	
+
+		a 
+			:text-decoration none
+			:color white
+			:font-family $title-font
+			:text-transform uppercase
+			:letter-spacing 0.8px
+			+display-for(md sm xs)
+				:padding 20px
+				:display block
+		a:hover 
+			:color $gold
+			+display-for(md sm xs)
+				:background $gold
+				:color white
+	.main--toggle
+		:display none
+		+display-for(md sm xs)
+			:float right 
+			:display block
+			:transition all 0.3s
+			:padding 12px 0 18px
+			&:hover 
+				&:before
+					:transform translate3d(0, -1px, 0)
+				&:after 
+					:transform translate3d(0, 1px, 0)
+			&:before, &:after
+				:content ' '
+				:width 32px
+				:height 2px
+				:background white
+				:display block
+				:margin-top 6px
+				:transition all 0.3s
+					
+			span
+				:width 32px
+				:height 2px
+				:margin-top 6px
+				:display block
+				:background white
+				:transition all 0.3s
+	.main--toggle.active
+		+display-for(md sm xs)
+			:padding 11px 0 17px
+			span 
+				:opacity 0
+				:width 28px
+				:height 4px
+				:transform translate3d(0, 0, 0) rotate(45deg)
+			&:before
+				:transform translate3d(0, 8px, 0) rotate(45deg)
+				:width 22px
+				:height 2px
+			&:after
+				:transform translate3d(0, -10px, 0) rotate(-45deg)
+				:width 22px
+				:height 2px
+
+			
+
+// HEADER
+header 
+	:background linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), image-url('video-img.png')
+	:background-size cover
+	:color white
+	h2 
+		:margin 0 0 12px
+		+display-for(xs)
+			:margin-right 10px
+	.wrapper 
+		:height 100vh
+		:position relative
+		.header--text
+			:position absolute
+			:bottom 50px
+			:right 0
+
+//ABOUT
+.about 
+	.text-primary
+		:margin-bottom 140px
+		+display-for(xs)
+			:margin-bottom 80px
+	.col--two
+		&:nth-of-type(2n + 2)
+			:padding 0 30px
+			+display-for(xs)
+				:padding 0
+		&:nth-of-type(2n + 1)
+			+display-for(sm xs)
+				:height 200px 
+				:overflow hidden
+				:margin-bottom 22px	
+	.wrapper--flex	
+		:margin-bottom 60px
+		&:nth-of-type(2)
+			:flex-direction row-reverse
+			.col--two
+				&:nth-of-type(2n + 2)	
+					:padding-left 0
+					+display-for(sm)
+						:padding-left 20px
+					+display-for(xs)
+						:padding 0		
+
+//PEOPLE
+.people
+	:background $lightgrey
+	img 
+		:border-radius 50%
+
+	.wrapper--flex
+		&:nth-of-type(1)
+			:margin-bottom 60px
+			.col--img
+				:padding-left 80px
+		&:nth-of-type(2)
+			:flex-direction row-reverse	
+			.col--img 
+				:padding-right 80px	
+		.col--img 
+			+display-for(sm xs)
+				:padding 0 !important
+				:margin 20px		
+
+// SERVICES
+.services 
+	h2 
+		:text-align center
+	h3 
+		:margin 0 0 18px 0
+		+display-for(xs)
+			:text-align center	
+	.text-secondary
+		:margin-bottom 80px	
+	i 
+		:height 60px
+		:width 60px
+		:border 2px solid black
+		:border-radius 50%
+		:text-align center
+		:line-height 60px
+		:font-size 20px	
+		:transition 0.3s all ease
+		:cursor pointer
+		+display-for(xs)
+			:margin 0 auto 20px
+	i:hover
+		:background $gold	
+	.wrapper--flex
+		:width 80%
+		:margin 0 auto 48px
+		p 
+			:color $darkgrey	
+		div 
+			:width calc(100% - 100px)
+			+display-for(xs)
+				:width 100%
+//SOCIAL
+section.social 
+	:padding 0
+.social-element
+	:position relative
+	:justify-content center
+	&:nth-of-type(2n+5)
+		:background-color $lightgold
+	&:nth-of-type(8n+1)
+		:background-color $gold
+	&:nth-of-type(3)
+		:background-color $darkgold
+	&:nth-of-type(6)
+		:order 7
+	&:nth-of-type(7)
+		:order 6
+	&:nth-of-type(8)
+		:order 9
+	&:nth-of-type(9)
+		:order 8
+	&:after
+		:content ""
+		:display block
+		:padding-bottom 100%
+	+display-for(md sm)
+		&:nth-of-type(1)
+			:order 1
+		&:nth-of-type(2)
+			:order 2
+		&:nth-of-type(3)
+			:order 3
+		&:nth-of-type(4)
+			:order 4
+		&:nth-of-type(5)
+			:order 5
+		&:nth-of-type(6)
+			:order 6
+		&:nth-of-type(7)
+			:order 7
+		&:nth-of-type(8)
+			:order 8
+		&:nth-of-type(9)
+			:order 9	
+		&:nth-of-type(10)
+			:display none
+
+	+display-for(xs)
+		&:nth-of-type(1)
+			:order 1
+		&:nth-of-type(2)
+			:order 2
+		&:nth-of-type(3)
+			:order 4
+		&:nth-of-type(4)
+			:order 3
+		&:nth-of-type(5)
+			:order 5
+		&:nth-of-type(6)
+			:order 6
+		&:nth-of-type(7)
+			:order 8
+		&:nth-of-type(8)
+			:order 7
+		&:nth-of-type(9)
+			:order 9
+		&:nth-of-type(10)
+			:order 10		
+.social-element.col--four
+	+display-for(xs)
+		:width 50% !important			
+.instagram
+	:position absolute
+	:height 100%
+	:width 100%
+	:background-size cover
+	:background-position center
+.wrapper--flex.tweet-flex
+	:flex-wrap wrap
+.tweet
+	:display flex
+	:position absolute
+	:padding 0 20px
+	:height 80%
+	// :overflow scroll
+	:margin auto
+	:top 0 
+	:left 0 
+	:bottom 0 
+	:right 0
+	:color white
+	:font-size 16px
+	:font-family 'Georgia'
+	p 
+		:line-height 28px
+	+display-for(lg md)
+		:padding 0px 15px
+		:height 80%
+		p 
+			:line-height 18px
+			:margin 0
+	+display-for(sm xs)
+		:padding 0 15px
+		:height 90%
+	a 
+		:color white
+		:font-weight bold
+		:word-break break-all
+		:display inline-block
+
+	p 
+		:align-self center
+		:font-size 18px
+		+display-for(lg)
+			:font-size 16px
+			:line-height 1.2
+		+display-for(md)
+			:font-size 14px
+			:line-height 1.2
+		+display-for(sm)
+			:font-size 16px
+			:line-height 1.8			
+		+display-for(xs)
+			:font-size 13px
+			:line-height 1.3
+		
+.square
+	:position relative
+	// :width 20%
+	:border 2px solid black
+.square:after
+	:content ""
+	:display block
+	:padding-bottom 100%				
+
+//CONTACT
+.contact 
+	:background $transgold
+	:padding 80px 0
+	.contact--info 
+		:text-align center
+		p
+			:margin 0 0 8px 0
+		div:first-of-type
+			:margin-bottom 30px
+.request			
+	form, h2
+		:width 80%
+		:margin 0 auto
+	h2 
+		:margin-bottom 3.2rem	
+	form
+		label	
+			:font-size 13px
+			:text-transform uppercase
+			:transition 0.3s all ease
+		textarea
+			:border 2px solid black
+			:width 100%
+		input[type=submit]
+			:float right
+		.col--two	
+			:position relative
+			label
+				:position absolute
+				:top 0
+				:left 6px
+				+display-for(sm xs)
+					:left 0
+			input
+				:width 100%
+				:border none
+				:border-bottom 2px solid black
+				:padding 12px
+				:margin-bottom 20px
+		.col--two:nth-of-type(2n + 1)
+			:padding-right 10px	
+		.col--two:nth-of-type(2n + 2)		
+			:padding-left 10px
+		.col--two:nth-of-type(2n + 2), .col--two:nth-of-type(2n + 1)
+			+display-for(sm xs)
+				:padding 0
+			label
+				:left 16px
+				+display-for(sm xs)
+					:left 0
+//FOOTER
+footer
+	:background $purple
+	:color white
+	:padding 18px 0	
+	.logo-footer
+		:width 80px
+		:margin-right 30px
+	h3 
+		:font-size 2rem
+		:margin 0 0 12px
+	p 
+		:font-family $hl-font
+		:font-size 1.2rem
+		:line-height 1.8rem		
+	div 
+		:width calc(80% - 110px)				
+	div.social-links
+		:width 20%	
+		:text-align right
+		a 
+			:color white
+			:font-size 2rem
+			:margin-right 16px
+		a:hover 
+			:color $gold	
+		a:last-of-type
+			:margin-right 0	
+			
+
+
