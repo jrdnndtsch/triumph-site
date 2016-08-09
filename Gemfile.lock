@@ -100,6 +100,9 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    mailgun-ruby (1.0.3)
+      json (~> 1.8)
+      rest-client (~> 1.6)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
     mime-types (3.1)
@@ -146,6 +149,8 @@ GEM
     rake (11.2.2)
     rdoc (4.2.2)
       json (~> 1.4)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rinku (1.7.3)
     rspec-core (3.5.1)
       rspec-support (~> 3.5.0)
@@ -224,6 +229,7 @@ DEPENDENCIES
   instagram
   jbuilder (~> 2.0)
   jquery-rails
+  mailgun-ruby (~> 1.0.0)
   rails (= 4.2.5.1)
   rails_autolink
   rinku

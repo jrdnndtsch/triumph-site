@@ -276,13 +276,26 @@ header
 		:margin 0 0 12px
 		+display-for(xs)
 			:margin-right 10px
+	.arrow
+		:display inline-block
+		:width 100%
+		:text-align center
+		:margin-bottom 80px
+		img 
+			:width 50px
+				
 	.wrapper 
-		:height 100vh
+		:height 90vh
 		:position relative
+		+display-for(xs)
+			:height 80vh
 		.header--text
 			:position absolute
 			:bottom 50px
 			:right 0
+			+display-for(xs)
+				:width 100%
+				:text-align center
 
 //ABOUT
 .about 
@@ -502,13 +515,29 @@ section.social
 //CONTACT
 .contact 
 	:background $transgold
-	:padding 80px 0
+	:padding 0
+	.wrapper--flex
+		:align-items stretch
 	.contact--info 
 		:text-align center
+		:padding 80px 0
 		p
 			:margin 0 0 8px 0
 		div:first-of-type
 			:margin-bottom 30px
+	.contact--map
+		:background image-url('map-with-marker.png') center
+		:background-size cover	
+		:position relative
+		+display-for(sm xs)
+			:height 400px
+		a 
+			:position absolute
+			:top 0 
+			:left 0
+			:height 100%
+			:width 100%
+
 .request			
 	form, h2
 		:width 80%
@@ -525,6 +554,10 @@ section.social
 			:width 100%
 		input[type=submit]
 			:float right
+		.comments-label 
+			:padding-left 6px
+			+display-for(sm xs)	
+				:padding-left 0	
 		.col--two	
 			:position relative
 			label
@@ -543,13 +576,13 @@ section.social
 			:padding-right 10px	
 		.col--two:nth-of-type(2n + 2)		
 			:padding-left 10px
-		.col--two:nth-of-type(2n + 2), .col--two:nth-of-type(2n + 1)
-			+display-for(sm xs)
-				:padding 0
 			label
 				:left 16px
 				+display-for(sm xs)
 					:left 0
+		.col--two:nth-of-type(2n + 2), .col--two:nth-of-type(2n + 1)
+			+display-for(sm xs)
+				:padding 0
 //FOOTER
 footer
 	:background $purple
@@ -566,10 +599,16 @@ footer
 		:font-size 1.2rem
 		:line-height 1.8rem		
 	div 
-		:width calc(80% - 110px)				
+		:width calc(80% - 110px)
+		+display-for(sm xs)
+			:width calc(100% - 110px)				
 	div.social-links
 		:width 20%	
 		:text-align right
+		+display-for(sm xs)
+			:width calc(100% - 110px)
+			:margin-left 110px
+			:text-align left
 		a 
 			:color white
 			:font-size 2rem

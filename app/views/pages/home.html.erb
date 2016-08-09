@@ -23,7 +23,7 @@
 			<h2>Advisory Firm</h2>
 		</div>
 	</div>
-	<a href=""><img src="" alt="arrow image"></a>
+	<a href="#about" class="arrow"><%= image_tag 'arrow.svg'%></a>
 </header>
 <section class="about" id="about">
 	<div class="wrapper">
@@ -138,7 +138,7 @@
 	</div>
 </section>
 <section class="contact" id="contact">
-	<div class="wrapper">
+	<div class="wrapper--flex">
 		<div class="contact--info col--two">
 			<h2>Get In Touch</h2>
 			<div>
@@ -152,15 +152,15 @@
 				<p>Fax: 1-888-315-7781</p>
 			</div>
 		</div>
-		<div class="contact--map">
-			
+		<div class="col--two contact--map">
+			<a href="https://www.google.ca/maps/place/Triumph+Capital+Limited/@43.6383919,-79.4205918,17z/data=!3m1!4b1!4m5!3m4!1s0x882b350387712add:0xda950ce2da76decb!8m2!3d43.6383919!4d-79.4184031" target="_blank"></a>
 		</div>
 	</div>
 </section>
 <section class="request" id="request">
-	<div class="wrapper">
+	<div class="wrapper clearfix	">
 		<h2>Request a Quote</h2>
-		<form action="">
+		<form action="" id="request_form">
 			<div class="wrapper--flex">
 				<div class="col--two">
 					<label for="first_name">First Name</label>
@@ -179,9 +179,9 @@
 					<input type="text" id="phone" name="phone">
 				</div>
 			</div>
-			<label for="comments">Comments</label>
+			<label for="comments" class="comments-label">Comments</label>
 			<textarea name="comments" id="comments" cols="30" rows="10"></textarea>
-			<input type="submit" value="SUBMIT ▸" class="button button--primary">
+			<input type="submit" value="SUBMIT ▸" class="button button--primary" id="submitRequest">
 		</form>
 	</div>
 </section>
@@ -193,9 +193,9 @@
 			<p>Copyright © 2016 Triumph Capital Limited. All Rights Reserved. Developed by Up At Five Triumph Capital Limited | 171 East Liberty Street Suite 272 Toronto, ON M6K 3P6 | (647) 345-0611 | 1-888-315-7781</p>
 		</div>
 		<div class="social-links">
-			<a href="https://www.facebook.com/WWFCanada/" target="_blank"><i class="fa fa-facebook"></i></a>
-			<a href="https://twitter.com/WWFCanada" target="_blank"><i class="fa fa-twitter"></i></a>
-			<a href="https://www.instagram.com/wwfcanada/" target="_blank"><i class="fa fa-instagram"></i></a>
+			<a href="https://www.facebook.com/Triumph-Capital-Limited-656977831072525" target="_blank"><i class="fa fa-facebook"></i></a>
+			<a href="https://twitter.com/Diana_M_Dyer" target="_blank"><i class="fa fa-twitter"></i></a>
+			<a href="https://www.instagram.com/triumph_capital/" target="_blank"><i class="fa fa-instagram"></i></a>
 		</div>
 	</div>
 </footer>
@@ -241,7 +241,7 @@
 	    }
 	  });
 
-	  $('input[type=text], input[type=email]').on('click', function(){
+	  $('input[type=text], input[type=email]').on('click, focus', function(){
 	  	var label_name = $(this).attr('id')
 	  	var label = $("label[for='"+label_name+"']")
 	  	$(label).css('top', '-20px')
@@ -260,18 +260,14 @@
 	  	e.preventDefault()
 	  	$(this).toggleClass('active');
 	  	$('.menu--main').slideToggle('normal')
-	  });
-	  $('.menu--main a').on('click', function(){
-	  	$('.main--toggle').toggleClass('active')
-	  	$('.menu--main').slideToggle('normal')
-	  	console.log('doing')
+	  	$('.menu--main').hasClass('.active') ? $('.menu--main').removeClass('.active') : $('.menu--main').addClass('.active')
 	  });
 
 	  function mainMenuSmall(){
-	  	if(windowSize <= 959){
-	  		$('.menu--main').css('display', 'none');
+	  	if(windowSize <= 959 ){
+	  		$('.menu--main').hasClass('.active') ? null : $('.menu--main').css('display', 'none')
 	  	}else{
-	  		$('.menu--main').css('display', 'flex')
+	  		$('.menu--main').css('display', 'flex').addClass('active')
 	  	}
 	  }
 
@@ -279,12 +275,35 @@
 	  $(window).smartresize(function(){
 	  	if($(this).width() != theWidth){
 	  		windowSize = $(window).innerWidth()
-	  		// mainMenu()
 	  		mainMenuSmall()
 	  		theWidth = $(this).width()
 	  	}
 	  });
 
 	  mainMenuSmall()
+
+	$('#request_form').on('submit', function(e){
+		e.preventDefault();
+		var data = $(this).serializeArray()
+		console.log(data)
+
+		$.ajax({
+	        url: '/',
+	        type: 'get',
+	        data: {
+	        	first: data[0].value, 
+	        	last: data[1].value,
+	        	email: data[2].value,
+	        	phone: data[3].value,
+	        	comment: data[4].value,
+	          thing: true
+	        },
+	        dataType: 'script'
+      	});
+      	setTimeout(function(){
+      		alert('thank you! Your request has been sent.')
+      	},1000)
+      	
+	})
 	
 </script>

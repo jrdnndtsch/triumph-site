@@ -11,5 +11,14 @@ class PagesController < ApplicationController
   	  @socials << @tweets[i]
   	  @socials << @instagrams[i]
   	end
+
+    if params[:thing]
+      @first = params[:first]
+      @last = params[:last]
+      @email = params[:email]
+      @phone = params[:phone]
+      @comment = params[:comment]
+      RequestQuote.new_quote_request(@first, @last, @email, @phone, @comment).deliver
+    end  
   end
 end
