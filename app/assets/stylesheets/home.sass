@@ -330,6 +330,9 @@ header
 	:background $lightgrey
 	img 
 		:border-radius 50%
+		:width 70%
+		:display block
+		:margin 0 auto
 
 	.wrapper--flex
 		&:nth-of-type(1)
@@ -452,7 +455,8 @@ section.social
 	:position absolute
 	:height 100%
 	:width 100%
-	:background-size cover
+	:background-size contain
+	:background-repeat no-repeat
 	:background-position center
 .wrapper--flex.tweet-flex
 	:flex-wrap wrap

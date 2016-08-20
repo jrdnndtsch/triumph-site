@@ -3,8 +3,8 @@ class PagesController < ApplicationController
   # For APIs, you may want to use :null_session instead.
   require 'rinku'
   def home
-  	@tweets = Tweet.last(4)
-  	@instagrams = Gram.last(4)
+  	@tweets = Tweet.last(5)
+  	@instagrams = Gram.last(5)
 
   	@socials = []
   	(0..4).each do |i|

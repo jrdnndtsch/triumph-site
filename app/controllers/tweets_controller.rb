@@ -7,6 +7,17 @@ class TweetsController < ApplicationController
     @create_tweets = CreateTweet.all
   end
 
+  def upload
+    @triumph_tweets = $client.user_timeline 
+    @triumph_tweets.first(5).each_with_index do |tweet, index|
+      index_plus_one = index + 1
+      this_tweet = Tweet.where(id: index_plus_one).first_or_initialize
+      this_tweet.update(text: tweet.text)
+      this_tweet.save
+    end 
+    render nothing: true, status: :ok, content_type: "text/html"
+  end
+
   # GET /create_tweets/1
   # GET /create_tweets/1.json
   def show
