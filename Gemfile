@@ -9,6 +9,10 @@ gem 'twitter'
 gem 'rails_autolink'
 gem 'rinku'
 
+# facebook api
+gem "koala", "~> 2.2"
+gem 'json'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

@@ -1,10 +1,38 @@
 class GramsController < ApplicationController
   before_action :set_gram, only: [:show, :edit, :update, :destroy]
+  require 'koala'
+  require 'net/http'
+  require 'uri'
+  require 'nokogiri'
+  require 'open-uri'
 
   # GET /grams
   # GET /grams.json
   def index
     @grams = Gram.all
+    @graph = Koala::Facebook::API.new("EAACEdEose0cBAPSG2ww2LmNszOyJ4TtiYni3MaIi1b6kc90ctZBKTFgJZCqUyIfS43xVMJxWaZBRLOGisZCZAOUGnHPibd7zZByLw75dCNilZCkM8MIxeTMc6sNV4Mt9LNv1nKT8cWkpbQ11gO0KqgWZB1mUSh4bfdvIQf4F6nBZABwZDZD")
+    profile = @graph.get_object("me")
+    client = Koala::Facebook::API.new("EAACEdEose0cBAPSG2ww2LmNszOyJ4TtiYni3MaIi1b6kc90ctZBKTFgJZCqUyIfS43xVMJxWaZBRLOGisZCZAOUGnHPibd7zZByLw75dCNilZCkM8MIxeTMc6sNV4Mt9LNv1nKT8cWkpbQ11gO0KqgWZB1mUSh4bfdvIQf4F6nBZABwZDZD")
+    posts = client.get_connection('me', 'posts?type=link',
+                        {
+                          fields: ['message', 'id', 'from', 'type',
+                                    'picture', 'link', 'created_time', 'updated_time'
+                            ]})
+    uri = URI.parse("http://www.investopedia.com/articles/markets/072016/usoriented-companies-may-outperform-market.asp")
+    # Full control
+    http = Net::HTTP.new(uri.host, uri.port)
+
+    request = Net::HTTP::Get.new(uri.request_uri)
+    # request = Net::HTTP.get_response(uri)
+    # request.set_form_data({"user[name]" => "testusername", "user[email]" => "testemail@yahoo.com"})
+
+    response = http.request(request)
+    # @response = JSON.parse(response.body)
+    re = Nokogiri::HTML(open('http://www.investopedia.com/articles/markets/072016/usoriented-companies-may-outperform-market.asp'))
+    re_image = re.css("meta[property='og:image']")
+    re_title = re.css("meta[property='og:title']")
+    re_desc = re.css("meta[property='og:description']")
+    raise "hell"
   end
 
   def upload  
