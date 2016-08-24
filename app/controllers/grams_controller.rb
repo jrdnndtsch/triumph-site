@@ -10,9 +10,9 @@ class GramsController < ApplicationController
   # GET /grams.json
   def index
     @grams = Gram.all
-    @graph = Koala::Facebook::API.new("EAACEdEose0cBAPSG2ww2LmNszOyJ4TtiYni3MaIi1b6kc90ctZBKTFgJZCqUyIfS43xVMJxWaZBRLOGisZCZAOUGnHPibd7zZByLw75dCNilZCkM8MIxeTMc6sNV4Mt9LNv1nKT8cWkpbQ11gO0KqgWZB1mUSh4bfdvIQf4F6nBZABwZDZD")
+    @graph = Koala::Facebook::API.new("EAACEdEose0cBAGBqJZC9dpBY8qLIf2prcDH3PiQiqS6tP4w1A1a9XZBkZC4ZAZBCEn1O9Xkq8Cnaaz8992PKOFMGwZBVGg37sQZBag0nqmRgu7cwVz8WMa9Sns0skD7jPzyivxRRliRqcOEJMpShKDlVXCebgoidZChABuHLobu5AQZDZD")
     profile = @graph.get_object("me")
-    client = Koala::Facebook::API.new("EAACEdEose0cBAPSG2ww2LmNszOyJ4TtiYni3MaIi1b6kc90ctZBKTFgJZCqUyIfS43xVMJxWaZBRLOGisZCZAOUGnHPibd7zZByLw75dCNilZCkM8MIxeTMc6sNV4Mt9LNv1nKT8cWkpbQ11gO0KqgWZB1mUSh4bfdvIQf4F6nBZABwZDZD")
+    client = Koala::Facebook::API.new("EAACEdEose0cBAGBqJZC9dpBY8qLIf2prcDH3PiQiqS6tP4w1A1a9XZBkZC4ZAZBCEn1O9Xkq8Cnaaz8992PKOFMGwZBVGg37sQZBag0nqmRgu7cwVz8WMa9Sns0skD7jPzyivxRRliRqcOEJMpShKDlVXCebgoidZChABuHLobu5AQZDZD")
     posts = client.get_connection('me', 'posts?type=link',
                         {
                           fields: ['message', 'id', 'from', 'type',
@@ -31,8 +31,27 @@ class GramsController < ApplicationController
     re = Nokogiri::HTML(open('http://www.investopedia.com/articles/markets/072016/usoriented-companies-may-outperform-market.asp'))
     re_image = re.css("meta[property='og:image']")
     re_title = re.css("meta[property='og:title']")
-    re_desc = re.css("meta[property='og:description']")
-    raise "hell"
+    re_desc  = re.css("meta[property='og:description']")
+
+    @re_image_string = re_image.at('meta')['content']
+    @re_title_string = re_title.at('meta')['content']
+    @re_desc_string  = re_desc.at('meta')['content']
+    # raise "hell"
+    # Secon
+    uri2 = URI.parse('http://www.investopedia.com/articles/basics/07/diversification-style.asp?article=1&utm_campaign=www.investopedia.com&utm_source=investing-basics&utm_term=7376183&utm_medium=email')
+    http2 = Net::HTTP.new(uri2.host, uri2.port)
+    request2 = Net::HTTP::Get.new(uri2.request_uri)
+    response2 = http2.request(request2)
+
+    # re2 = Nokogiri::HTML(open('http://www.investopedia.com/articles/etfs-mutual-funds/072416/5-reasons-find-asset-managers-who-use-etfs.asp?article=3&utm_campaign=www.investopedia.com&utm_source=investing-basics&utm_term=7235320&utm_medium=email'))
+    re2 = Nokogiri::HTML(open('http://www.investopedia.com/articles/basics/07/diversification-style.asp?article=1&utm_campaign=www.investopedia.com&utm_source=investing-basics&utm_term=7376183&utm_medium=email'))
+    re2_image = re2.css("meta[property='og:image']")
+    re2_title = re2.css("meta[property='og:title']")
+    re2_desc  = re2.css("meta[property='og:description']")
+
+    @re2_image_string = re2_image.at('meta')['content']
+    @re2_title_string = re2_title.at('meta')['content']
+    @re2_desc_string  = re2_desc.at('meta')['content']
   end
 
   def upload  

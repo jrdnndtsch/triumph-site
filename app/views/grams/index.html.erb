@@ -1,29 +1,46 @@
-<p id="notice"><%= notice %></p>
+<div class="wrapper">
+  
 
-<h1>Listing Grams</h1>
+  <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Text</th>
-      <th>Image url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <h1>Listing Grams</h1>
+  <div class="wrapper--flex" style="align-items:flex-start; justify-content">
+    <div class="col--two" style="width: 48%;">
+      <img src="<%= @re_image_string %>" alt="" style="max-width: 100%; height: 300px;object-fit: cover;">
+      <h1><%= @re_title_string %></h1>
+      <p><%= @re_desc_string %></p> 
+    </div>
+    <div class="col--two" style="width: 48%;">
+      <img src="<%= @re2_image_string %>" alt="" style="max-width: 100%; height: 300px;object-fit: cover;">
+      <h1><%= @re2_title_string %></h1>
+      <p><%= @re2_desc_string %></p> 
+    </div>
+  </div>
 
-  <tbody>
-    <% @grams.each do |gram| %>
+  <hr>
+  <table>
+    <thead>
       <tr>
-        <td><%= gram.text %></td>
-        <td><%= gram.image_url %></td>
-        <td><%= link_to 'Show', gram %></td>
-        <td><%= link_to 'Edit', edit_gram_path(gram) %></td>
-        <td><%= link_to 'Destroy', gram, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Text</th>
+        <th>Image url</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @grams.each do |gram| %>
+        <tr>
+          <td><%= gram.text %></td>
+          <td><%= gram.image_url %></td>
+          <td><%= link_to 'Show', gram %></td>
+          <td><%= link_to 'Edit', edit_gram_path(gram) %></td>
+          <td><%= link_to 'Destroy', gram, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Gram', new_gram_path %>
+  <br>
+
+  <%= link_to 'New Gram', new_gram_path %>
+</div>
