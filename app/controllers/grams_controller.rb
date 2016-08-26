@@ -10,14 +10,19 @@ class GramsController < ApplicationController
   # GET /grams.json
   def index
     @grams = Gram.all
-    @graph = Koala::Facebook::API.new("EAACEdEose0cBAGBqJZC9dpBY8qLIf2prcDH3PiQiqS6tP4w1A1a9XZBkZC4ZAZBCEn1O9Xkq8Cnaaz8992PKOFMGwZBVGg37sQZBag0nqmRgu7cwVz8WMa9Sns0skD7jPzyivxRRliRqcOEJMpShKDlVXCebgoidZChABuHLobu5AQZDZD")
+    access_token = "EAALpr00PQKMBAFOQITLX5LroqQ7QfFMPmZBYCXiIdSJIssRPZCXoxU5KVFAUVMrSZB2Dc43NhyMjP40PZAZAwltPrCXMtcUKhltXUJbTdGLQzWlMKf6LnjeoNyA7R3ihbtS3pPLQDahMQECfBlRruVM3k3VqpZAA8ZD"
+    # @graph = Koala::Facebook::API.new("EAALpr00PQKMBADd2VnHDk9FhezgoVMUjcuckkL0PIZCfgk3WQbKl2ydVCDAAkpJFcZAVwbZBBgpzVLG6cpSaEzNRPEm2UoRfJTfo0kVI7lZBQsFmvbAxb3kMXft3g0f3tYrzLaTqDmrVjKNhe8lLMFLSGbC2Q66DcqX6llDhCgZDZD")
+    @graph = Koala::Facebook::API.new(access_token)
     profile = @graph.get_object("me")
-    client = Koala::Facebook::API.new("EAACEdEose0cBAGBqJZC9dpBY8qLIf2prcDH3PiQiqS6tP4w1A1a9XZBkZC4ZAZBCEn1O9Xkq8Cnaaz8992PKOFMGwZBVGg37sQZBag0nqmRgu7cwVz8WMa9Sns0skD7jPzyivxRRliRqcOEJMpShKDlVXCebgoidZChABuHLobu5AQZDZD")
-    posts = client.get_connection('me', 'posts?type=link',
+    client = Koala::Facebook::API.new(access_token)
+    posts = client.get_connection('me', 'posts?with=link',
                         {
                           fields: ['message', 'id', 'from', 'type',
                                     'picture', 'link', 'created_time', 'updated_time'
                             ]})
+
+    message1 = posts.first['message']
+    link1 = posts.first['link']
     uri = URI.parse("http://www.investopedia.com/articles/markets/072016/usoriented-companies-may-outperform-market.asp")
     # Full control
     http = Net::HTTP.new(uri.host, uri.port)
@@ -28,14 +33,16 @@ class GramsController < ApplicationController
 
     response = http.request(request)
     # @response = JSON.parse(response.body)
-    re = Nokogiri::HTML(open('http://www.investopedia.com/articles/markets/072016/usoriented-companies-may-outperform-market.asp'))
+    re = Nokogiri::HTML(open(link1))
     re_image = re.css("meta[property='og:image']")
     re_title = re.css("meta[property='og:title']")
     re_desc  = re.css("meta[property='og:description']")
 
     @re_image_string = re_image.at('meta')['content']
     @re_title_string = re_title.at('meta')['content']
-    @re_desc_string  = re_desc.at('meta')['content']
+    # @re_desc_string  = re_desc.at('meta')['content']
+    @re_desc_string = message1
+    @link1 = link1
     # raise "hell"
     # Secon
     uri2 = URI.parse('http://www.investopedia.com/articles/basics/07/diversification-style.asp?article=1&utm_campaign=www.investopedia.com&utm_source=investing-basics&utm_term=7376183&utm_medium=email')
@@ -43,15 +50,20 @@ class GramsController < ApplicationController
     request2 = Net::HTTP::Get.new(uri2.request_uri)
     response2 = http2.request(request2)
 
+    message2 = posts.second['message']
+    link2 = posts.second['link']
+
     # re2 = Nokogiri::HTML(open('http://www.investopedia.com/articles/etfs-mutual-funds/072416/5-reasons-find-asset-managers-who-use-etfs.asp?article=3&utm_campaign=www.investopedia.com&utm_source=investing-basics&utm_term=7235320&utm_medium=email'))
-    re2 = Nokogiri::HTML(open('http://www.investopedia.com/articles/basics/07/diversification-style.asp?article=1&utm_campaign=www.investopedia.com&utm_source=investing-basics&utm_term=7376183&utm_medium=email'))
+    re2 = Nokogiri::HTML(open(link2))
     re2_image = re2.css("meta[property='og:image']")
     re2_title = re2.css("meta[property='og:title']")
     re2_desc  = re2.css("meta[property='og:description']")
 
     @re2_image_string = re2_image.at('meta')['content']
     @re2_title_string = re2_title.at('meta')['content']
-    @re2_desc_string  = re2_desc.at('meta')['content']
+    # @re2_desc_string  = re2_desc.at('meta')['content']
+    @re2_desc_string = message2
+    @link2 = link2
   end
 
   def upload  
