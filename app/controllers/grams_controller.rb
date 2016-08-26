@@ -1,8 +1,8 @@
 class GramsController < ApplicationController
   before_action :set_gram, only: [:show, :edit, :update, :destroy]
   require 'koala'
-  require 'net/http'
-  require 'uri'
+  # require 'net/http'
+  # require 'uri'
   require 'nokogiri'
   require 'open-uri'
 
@@ -12,8 +12,8 @@ class GramsController < ApplicationController
     @grams = Gram.all
     access_token = "EAALpr00PQKMBAFOQITLX5LroqQ7QfFMPmZBYCXiIdSJIssRPZCXoxU5KVFAUVMrSZB2Dc43NhyMjP40PZAZAwltPrCXMtcUKhltXUJbTdGLQzWlMKf6LnjeoNyA7R3ihbtS3pPLQDahMQECfBlRruVM3k3VqpZAA8ZD"
     # @graph = Koala::Facebook::API.new("EAALpr00PQKMBADd2VnHDk9FhezgoVMUjcuckkL0PIZCfgk3WQbKl2ydVCDAAkpJFcZAVwbZBBgpzVLG6cpSaEzNRPEm2UoRfJTfo0kVI7lZBQsFmvbAxb3kMXft3g0f3tYrzLaTqDmrVjKNhe8lLMFLSGbC2Q66DcqX6llDhCgZDZD")
-    @graph = Koala::Facebook::API.new(access_token)
-    profile = @graph.get_object("me")
+    # @graph = Koala::Facebook::API.new(access_token)
+    # profile = @graph.get_object("me")
     client = Koala::Facebook::API.new(access_token)
     posts = client.get_connection('me', 'posts?with=link',
                         {

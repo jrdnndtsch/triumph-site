@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Facebooks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Message</th>
+      <th>Link</th>
+      <th>Image link</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @facebooks.each do |facebook| %>
+      <tr>
+        <td><%= facebook.message %></td>
+        <td><%= facebook.link %></td>
+        <td><%= facebook.image_link %></td>
+        <td><%= facebook.title %></td>
+        <td><%= facebook.description %></td>
+        <td><%= link_to 'Show', facebook %></td>
+        <td><%= link_to 'Edit', edit_facebook_path(facebook) %></td>
+        <td><%= link_to 'Destroy', facebook, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Facebook', new_facebook_path %>

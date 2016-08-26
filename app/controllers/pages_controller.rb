@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   def home
   	@tweets = Tweet.last(5)
   	@instagrams = Gram.last(5)
+    @facebooks = Facebook.last(2)
 
   	@socials = []
   	(0..4).each do |i|

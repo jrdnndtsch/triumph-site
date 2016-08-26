@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :facebooks
   resources :grams
   resources :create_tweets
   # The priority is based upon order of creation: first created -> highest priority.
@@ -9,6 +10,7 @@ Rails.application.routes.draw do
 
   get 'upload_grams' => 'grams#upload'
   get 'upload_tweets' => 'tweets#upload'
+  get 'upload_fbs' => 'facebooks#upload'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

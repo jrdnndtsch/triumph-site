@@ -103,6 +103,19 @@
 			<% end %>
 	</div>
 </section>
+<section class="facebook">
+	<div class="wrapper">
+		<div class="wrapper--flex" >
+			<% @facebooks.each do |fb| %>
+			  <div class="col--two" >
+			    <img src="<%= fb.image_link %>" alt="<%= fb.title %>">
+			    <a href="<%= fb.link %>" target="_blank"><h3><%= fb.title %></h3></a>
+			    <p><%= fb.message %></p> 
+			  </div>
+		  <% end %>
+		 </div>
+	</div>
+</section>
 <section class="services" id="services">
 	<div class="wrapper">
 		<h2>What We Do</h2>
