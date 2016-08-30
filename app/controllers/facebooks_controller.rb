@@ -13,7 +13,7 @@ class FacebooksController < ApplicationController
 
   def upload
     client = Koala::Facebook::API.new(ENV['fb_access_token'])
-    posts = client.get_connection('me', 'posts?with=link',
+    posts = client.get_connection('triumphcapitallimited', 'posts',
                     {
                       fields: ['message', 'id', 'from', 'type',
                                 'picture', 'link', 'created_time', 'updated_time'

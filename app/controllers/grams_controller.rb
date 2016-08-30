@@ -15,7 +15,7 @@ class GramsController < ApplicationController
     # @graph = Koala::Facebook::API.new(access_token)
     # profile = @graph.get_object("me")
     client = Koala::Facebook::API.new(access_token)
-    posts = client.get_connection('me', 'posts?with=link',
+    posts = client.get_connection('triumphcapitallimited', 'posts?with=link',
                         {
                           fields: ['message', 'id', 'from', 'type',
                                     'picture', 'link', 'created_time', 'updated_time'
