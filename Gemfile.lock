@@ -49,6 +49,7 @@ GEM
     buftok (0.2.0)
     builder (3.2.2)
     byebug (9.0.5)
+    certified (1.0.0)
     coderay (1.1.1)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
@@ -129,6 +130,7 @@ GEM
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
+    open_uri_redirections (0.2.1)
     pg (0.18.4)
     pkg-config (1.1.7)
     rack (1.6.4)
@@ -247,6 +249,7 @@ DEPENDENCIES
   autoprefixer-rails
   better_errors
   byebug
+  certified
   coffee-rails (~> 4.1.0)
   dotenv-rails
   factory_girl_rails
@@ -257,6 +260,7 @@ DEPENDENCIES
   json
   koala (~> 2.2)
   mailgun-ruby (~> 1.0.0)
+  open_uri_redirections
   pg
   rails (= 4.2.5.1)
   rails_12factor

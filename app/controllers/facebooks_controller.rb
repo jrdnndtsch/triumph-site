@@ -23,7 +23,8 @@ class FacebooksController < ApplicationController
       index_plus_one = index + 1
 
       if fb['link'].present?
-        re = Nokogiri::HTML(open(fb['link']))
+        re = Nokogiri::HTML(open(fb['link'], :allow_redirections => :all))
+
         re_image = re.css("meta[property='og:image']")
         re_title = re.css("meta[property='og:title']")
         re_desc  = re.css("meta[property='og:description']")

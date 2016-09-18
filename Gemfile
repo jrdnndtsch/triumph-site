@@ -9,6 +9,8 @@ gem 'twitter'
 gem 'rails_autolink'
 gem 'rinku'
 
+gem 'certified'
+gem 'open_uri_redirections'
 # facebook api
 gem "koala", "~> 2.2"
 gem 'json'
