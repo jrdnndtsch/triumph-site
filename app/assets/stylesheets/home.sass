@@ -265,12 +265,34 @@ nav
 				:width 22px
 				:height 2px
 
-			
+.video-container 
+	:text-align center
+	:background rgba(0,0,0,0.4)
+	:padding 40px 0 40px 0
+	:overflow hidden
+	:background-size cover
+	:background-position center
+	:background-attachment fixed
+	+display-for(xs sm)
+		:padding 80px 0 40px 0
+
+	video
+		:position fixed
+		:top 50%
+		:left 50%
+		:min-width 100%
+		:z-index -10
+		:min-height 100%
+		:width auto
+		:height auto
+		:transform translate(-50%, -50%)
+		:background-size cover
+		:transition 1s opacity			
 
 // HEADER
 header 
-	:background linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), image-url('video-img.png')
-	:background-size cover
+	// :background linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), image-url('video-img.png')
+	// :background-size cover
 	:color white
 	h2 
 		:margin 0 0 12px
@@ -291,7 +313,7 @@ header
 			:height 80vh
 		.header--text
 			:position absolute
-			:bottom 50px
+			:bottom 70px
 			:right 0
 			+display-for(xs)
 				:width 100%
@@ -299,6 +321,7 @@ header
 
 //ABOUT
 .about 
+	:background-color white
 	.text-primary
 		:margin-bottom 140px
 		+display-for(xs)
@@ -350,6 +373,7 @@ header
 
 // SERVICES
 .services 
+	:background-color white
 	h2 
 		:text-align center
 	h3 
@@ -361,7 +385,7 @@ header
 	i 
 		:height 60px
 		:width 60px
-		:border 2px solid black
+		:border 2px solid $gold
 		:border-radius 50%
 		:text-align center
 		:line-height 60px
@@ -370,8 +394,8 @@ header
 		:cursor pointer
 		+display-for(xs)
 			:margin 0 auto 20px
-	i:hover
-		:background $gold	
+	// i:hover
+	// 	:background $gold	
 	.wrapper--flex
 		:width 80%
 		:margin 0 auto 48px
@@ -384,6 +408,7 @@ header
 //SOCIAL
 section.social 
 	:padding 0
+	:background-color white
 .social-element
 	:position relative
 	:justify-content center
@@ -541,7 +566,8 @@ section.social
 
 //CONTACT
 .contact 
-	:background $transgold
+	:background-color white
+	:background $gold
 	:padding 0
 	.wrapper--flex
 		:align-items stretch
@@ -565,7 +591,8 @@ section.social
 			:height 100%
 			:width 100%
 
-.request			
+.request
+	:background-color white			
 	form, h2
 		:width 80%
 		:margin 0 auto

@@ -15,15 +15,22 @@
 	</div>
 </nav>
 <header>
+<div class="video-container">
 	<div class=" wrapper">
+		<video loop autoplay="true" >
+		  <source src="<%= image_url('triumph-video.mp4')%>" type="video/mp4">
+		Your browser does not support the video tag.
+		</video>
+		
 		<div class="header--text">
 			<h2>Welcome to</h2>
 			<h2 class="hl">Triumph Capital Limited</h2>
 			<h2>a Financial Technology</h2>
-			<h2>Advisory Firm</h2>
+			<h2>and Advisory Firm</h2>
 		</div>
 	</div>
-	<a href="#about" class="arrow"><%= image_tag 'arrow.svg'%></a>
+		<a href="#about" class="arrow"><%= image_tag 'arrow.svg'%></a>
+</div>
 </header>
 <section class="about" id="about">
 	<div class="wrapper">
@@ -65,10 +72,10 @@
 			<div class="col--two">
 				<h2>Diana Dyer</h2>
 				<h4>President and CEO</h4>
-				<p>As the President and CEO of Triumph Capital Limited, Diana brings a depth and understanding of the financial services industry that is rarely seen in the marketplace today. Her passion for helping families make informed decisions about their financial needs has led her to become one of the most successful agents in her field. Diana holds a Diamond Club award for being listed as one of the top 30 brokers in Canada for more than 5 years and is the youngest broker to have ever received this award. Diana has been active in a number of charities and public outreach programs, most recently Motionball for the Special Olympics. Diana is known for her discretion and her ability to identify and address the needs of her clients, regardless of their situation. Her skillset allows her to excel and build lasting relationships built on mutual respect and a deeply rooted desire to help others accomplish their financial goals. Diana is the 2015 Notable.ca award winner in Finance</p>
+				<p>As the President and CEO of Triumph Capital Limited, Diana brings a depth and understanding of the financial services industry that is rarely seen in the marketplace today. Her passion for helping young professionals make informed decisions about their financial needs has led her to become one of the most successful agents in her field. Diana holds a Diamond Club award for being listed as one of the top 30 brokers in Canada for more than 5 years and is the youngest broker to have ever received this award. Diana has been active in a number of charities and public outreach programs, most recently Motionball for the Special Olympics and the Canadian Mental Health Association.. Diana is known for her discretion and her ability to identify and address the needs of her clients, regardless of their situation. Her skillset allows her to excel and build lasting relationships built on mutual respect and a deeply rooted desire to help others accomplish their financial goals. Diana is the 2015 Notable.ca award winner in Finance</p>
 			</div>
 			<div class="col--two col--img">
-				<img src="https://unsplash.it/700/700/?random" alt="">
+				<%= image_tag 'diana.jpg'%>
 			</div>
 		</div>
 		<div class="wrapper--flex">
@@ -78,7 +85,7 @@
 				<p>Noah has been a financial adviser for over a decade. Throughout this time, he has developed a network of relationships across the financial industry, both in the United States and Canada, that allow him to provide unique advice and opportunities for clients across the economic spectrum. A focus on ethical investing and business practices is something he believes in and shapes the culture of the entire Triumph team. Noah's clients include small to mid-size owner managed businesses, public companies, and professional practices across Ontario. His strategies are known for incorporating creative risk management solutions, along with stable long-term results appropriate throughout a clients entire financial life. Constantly seeking new opportunities for private clients, he can often be found at financial conferences, speaking at corporate events, or at his desk buried under a pile of earnings reports.</p>
 			</div>
 			<div class="col--two col--img">
-				<img src="https://unsplash.it/700/700/?random" alt="">
+				<%= image_tag 'noah.jpg'%>
 			</div>
 		</div>
 	</div>
@@ -215,6 +222,26 @@
 
 
 <script>
+
+	var vid = document.getElementById("bgvid");
+	var pauseButton = document.querySelector("#polina button");
+	var windowSize = $(window).innerWidth();
+
+	$('.main').removeClass('hidden')
+		$('.header').removeClass('hidden').hide().fadeIn(300, function(){
+			$('.header-text').removeClass('hidden').hide().fadeIn(1000, function(){
+			  $('.sub-title-01').removeClass('hidden').hide().fadeIn(2000, function(){
+			  	$('.sub-title-02').removeClass('hidden').hide().fadeIn(500, function(){
+			  		$('.sub-title-03').removeClass('hidden').hide().fadeIn(500)
+			  	});
+			  });
+			});	
+		});
+	function vidFade() {
+	  vid.classList.add("stopfade");
+	}
+
+
 	var windowSize = $(window).innerWidth();
 	(function($,sr){
 	  var debounce = function (func, threshold, execAsap) {
