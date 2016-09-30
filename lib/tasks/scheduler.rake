@@ -25,7 +25,7 @@ task :update_feed => :environment do
     id_count = 0
     posts.first(10).each_with_index do |fb, index|
       if fb['link'].present?
-        re = Nokogiri::HTML(open(fb['link'], :allow_redirections => :all))
+        re = Nokogiri::HTML(open(fb['link'], :allow_redirections => :all, 'User-Agent' => 'ruby'))
 
         re_image = re.css("meta[property='og:image']")
         re_title = re.css("meta[property='og:title']")
