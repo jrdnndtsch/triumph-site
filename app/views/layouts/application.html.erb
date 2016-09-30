@@ -8,6 +8,16 @@
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.png' %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- for facebook -->
+  <meta property="og:title" content="Triumph Capital Limited" />
+  <meta property="og:image" content="<%= asset_path('social-img.png')%>" />
+
+  <!-- for Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Triumph Capital Limited" />
+  <meta name="twitter:description" content="A Financial Technology and Advisory Firm" />
+  <meta name="twitter:image" content="<%= asset_path('social-img.png')%>" />
 </head>
 <body>
 
