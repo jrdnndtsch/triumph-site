@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160826121834) do
+ActiveRecord::Schema.define(version: 20160930160649) do
 
   create_table "facebooks", force: :cascade do |t|
     t.text     "message"
@@ -26,6 +26,16 @@ ActiveRecord::Schema.define(version: 20160826121834) do
   create_table "grams", force: :cascade do |t|
     t.string   "text"
     t.string   "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "requested_quotes", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "phone"
+    t.text     "comments"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

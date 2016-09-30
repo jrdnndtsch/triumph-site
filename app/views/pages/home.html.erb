@@ -21,7 +21,7 @@
 		  <source src="<%= image_url('In-And-Out.mp4')%>" type="video/mp4">
 		Your browser does not support the video tag.
 		</video>
-		
+		<p id="notice"><%= notice %></p>
 		<div class="header--text">
 			<h2>Welcome to</h2>
 			<h2 class="hl">Triumph Capital Limited</h2>
@@ -180,29 +180,42 @@
 <section class="request" id="request">
 	<div class="wrapper clearfix	">
 		<h2>Request a Quote</h2>
-		<form action="" id="request_form">
+		<%= form_for(@requested_quote) do |f| %>
+		  <% if @requested_quote.errors.any? %>
+		    <div id="error_explanation">
+		      <h2><%= pluralize(@requested_quote.errors.count, "error") %> prohibited this requested_quote from being saved:</h2>
+
+		      <ul>
+		      <% @requested_quote.errors.full_messages.each do |message| %>
+		        <li><%= message %></li>
+		      <% end %>
+		      </ul>
+		    </div>
+		  <% end %>
 			<div class="wrapper--flex">
-				<div class="col--two">
-					<label for="first_name">First Name</label>
-					<input type="text" id="first_name" name="first_name">
-				</div>
-				<div class="col--two">	
-					<label for="last_name">Last Name</label>
-					<input type="text" id="last_name" name="last_name">
-				</div>
-				<div class="col--two">
-					<label for="email">Email</label>
-					<input type="email" id="email" name="email">
-				</div>
-				<div class="col--two">
-					<label for="phone">Phone Number</label>
-					<input type="text" id="phone" name="phone">
-				</div>
+			  <div class="col--two">
+			    <%= f.label :first_name %>
+			    <%= f.text_field :first_name %>
+			  </div>
+			  <div class="col--two">
+			    <%= f.label :last_name %>
+			    <%= f.text_field :last_name %>
+			  </div>
+			  <div class="col--two">
+			    <%= f.label :email %>
+			    <%= f.text_field :email %>
+			  </div>
+			  <div class="col--two">
+			    <%= f.label :phone %>
+			    <%= f.text_field :phone %>
+			  </div>
 			</div>
-			<label for="comments" class="comments-label">Comments</label>
-			<textarea name="comments" id="comments" cols="30" rows="10"></textarea>
-			<input type="submit" value="SUBMIT ▸" class="button button--primary" id="submitRequest">
-		</form>
+		    <%= f.label :comments, class: "comments-label" %><br>
+		    <%= f.text_area :comments, id: "comments", cols: '30', rows: '10' %>
+		  <div class="actions">
+		    <%= f.submit 'SUBMIT ▸', class: "button button--primary" %>
+		  </div>
+		<% end %>
 	</div>
 </section>
 <footer>
@@ -322,28 +335,30 @@
 
 	  mainMenuSmall()
 
-	$('#request_form').on('submit', function(e){
-		e.preventDefault();
-		var data = $(this).serializeArray()
-		console.log(data)
+	// Now form going to database with form_for
 
-		$.ajax({
-	        url: '/',
-	        type: 'get',
-	        data: {
-	        	first: data[0].value, 
-	        	last: data[1].value,
-	        	email: data[2].value,
-	        	phone: data[3].value,
-	        	comment: data[4].value,
-	          thing: true
-	        },
-	        dataType: 'script'
-      	});
-      	setTimeout(function(){
-      		alert('thank you! Your request has been sent.')
-      	},1000)
+	// $('#request_form').on('submit', function(e){
+	// 	e.preventDefault();
+	// 	var data = $(this).serializeArray()
+	// 	console.log(data)
+
+	// 	$.ajax({
+	//         url: '/',
+	//         type: 'get',
+	//         data: {
+	//         	first: data[0].value, 
+	//         	last: data[1].value,
+	//         	email: data[2].value,
+	//         	phone: data[3].value,
+	//         	comment: data[4].value,
+	//           thing: true
+	//         },
+	//         dataType: 'script'
+ //      	});
+ //      	setTimeout(function(){
+ //      		alert('thank you! Your request has been sent.')
+ //      	},1000)
       	
-	})
+	// })
 	
 </script>

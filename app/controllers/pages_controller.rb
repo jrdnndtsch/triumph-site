@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   # For APIs, you may want to use :null_session instead.
   require 'rinku'
   def home
+    @requested_quote = RequestedQuote.new
   	@tweets = Tweet.last(5)
   	@instagrams = Gram.last(5)
     @facebooks = Facebook.first(2)

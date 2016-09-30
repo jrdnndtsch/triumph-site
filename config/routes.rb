@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :requested_quotes
   resources :facebooks
   resources :grams
   resources :create_tweets

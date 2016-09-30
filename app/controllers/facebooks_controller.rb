@@ -18,10 +18,8 @@ class FacebooksController < ApplicationController
                       fields: ['message', 'id', 'from', 'type',
                                 'picture', 'link', 'created_time', 'updated_time'
                         ]})
-
-    posts.first(5).each_with_index do |fb, index|
-      index_plus_one = index + 1
-
+    id_count = 0
+    posts.first(10).each_with_index do |fb, index|
       if fb['link'].present?
         re = Nokogiri::HTML(open(fb['link'], :allow_redirections => :all))
 
@@ -34,7 +32,9 @@ class FacebooksController < ApplicationController
           re_title_string = re_title.at('meta')['content']
           re_desc_string  = re_desc.at('meta')['content']
 
-          this_fb = Facebook.where(id: index_plus_one).first_or_initialize({message: fb['message'], link: fb['link'], image_link: re_image_string, title: re_title_string, description: re_desc_string  })
+          id_count += 1
+
+          this_fb = Facebook.where(id: id_count).first_or_initialize({message: fb['message'], link: fb['link'], image_link: re_image_string, title: re_title_string, description: re_desc_string  })
           this_fb.update({message: fb['message'], link: fb['link'], image_link: re_image_string, title: re_title_string, description: re_desc_string  })
           this_fb.save
         end
