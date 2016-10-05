@@ -9,6 +9,8 @@ gem 'twitter'
 gem 'rails_autolink'
 gem 'rinku'
 
+gem "autoprefixer-rails"
+
 gem 'certified'
 gem 'open_uri_redirections'
 # facebook api
