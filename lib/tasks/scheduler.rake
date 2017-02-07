@@ -24,6 +24,7 @@ task :update_feed => :environment do
                         ]})
     id_count = 0
     posts.first(10).each_with_index do |fb, index|
+
       if fb['link'].present?
         re = Nokogiri::HTML(open(fb['link'], :allow_redirections => :all, 'User-Agent' => 'ruby'))
 
@@ -34,7 +35,7 @@ task :update_feed => :environment do
         if re_image.present? && re_title.present?
           re_image_string = re_image.at('meta')['content']
           re_title_string = re_title.at('meta')['content']
-          re_desc_string  = re_desc.at('meta')['content']
+          re_desc_string  = re_desc.at('meta')['content'] re_desc_string.present?
 
           id_count += 1
 
