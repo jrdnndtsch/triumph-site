@@ -10,9 +10,96 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ 
+ *= require bootsy
  *= require_tree .
  *= require_self
  */
 @import 'variables';
 @import 'home';
+@import 'blogs';
  .clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; } 
+
+ @mixin toggleCheckbox( $labels:"YES" "NO",
+                        $handleSize:25px,
+                        $width:65px,
+                        $textOffset:5px,
+                        $duration:.2s,
+                        $onColor:rgba(30, 100, 255, .75),
+                        $offColor:rgba(240,240,240, .75)
+                      ){
+ 	&__wrap{
+ 		width       : $width;
+ 		height      : $handleSize;
+ 		line-height : $handleSize - 3px;
+ 		text-align  : left;
+ 	}
+
+ 	&__handle{
+ 		&::before{ right:$handleSize + $textOffset; content:nth($labels,1); }
+ 		&::after{ left:$handleSize + $textOffset; content:nth($labels,2); }
+
+ 		height        : $handleSize;
+ 		line-height   : $handleSize;
+ 		width         : $handleSize;
+ 		border-radius : $handleSize;
+ 		box-shadow    : 0 0 3px #888,
+ 						-#{$width/2 + $handleSize/2} 0 0 $width/2 $onColor,
+ 						#{$width/2 + $handleSize/2} 0 0 $width/2 $offColor;
+ 		transition    : $duration;
+ 	}
+ }
+
+ .toggleCheckbox{
+     display:block;
+     overflow:hidden;
+   
+     &__wrap{
+         display        : inline-block;
+         vertical-align : middle;
+
+         border         : 1px solid #BBB;
+         position       : relative;
+         border-radius  : 20px;
+         color          : #FFF;
+         overflow       : hidden;
+         box-shadow     : 0 1px 0 #CCC, 
+                          1px 3px 4px rgba(0, 0, 0, 0.5) inset;
+         white-space    : nowrap;
+         font-size      : 11px;
+         cursor         : pointer;
+       
+         
+         // fixes a bug in Chrome 
+         -webkit-backface-visibility: hidden;
+         -webkit-transform: translateZ(0);
+     }
+
+     &__handle{
+         &::before, &::after{ position:absolute; opacity:.7; transition:.1s; }
+         &::after{ left:0; color:#777; }
+         &::before{ right:0; }
+
+         cursor        : pointer;
+         display       : inline-block;
+         position      : relative;
+         z-index       : 1;
+         left          : 0;
+         background    : #F1F1F1;
+         border-radius : 20px;
+         font-weight   :normal;
+     }
+     
+     input{ position:absolute; z-index:-1; left:-999em; // for accessibility
+       &:focus ~ b{ background:white; }
+       &:checked ~ b{ left:100%; transform:translateX(-100%); }
+     }
+   
+     &:hover{
+         .toggleCheckbox__handle{ background:#FFF; 
+           &::before, &::after{ opacity:1; }
+         }
+     }
+   
+     @include toggleCheckbox();
+ }

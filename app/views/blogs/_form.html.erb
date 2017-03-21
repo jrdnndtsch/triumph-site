@@ -1,0 +1,42 @@
+<%= form_for(@blog) do |f| %>
+  <% if @blog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+
+      <ul>
+      <% @blog.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="wrapper blog--form">
+  <div class="wrapper--flex">
+    <div class="field blog--title-field">
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </div>
+    
+    <div class="wrapper--flex">
+      <%= f.label :published, class: 'toggleCheckbox' do %>
+        <span>Published</span>
+        <div class='toggleCheckbox__wrap'>
+             <%= f.check_box :published%>
+             <b class='toggleCheckbox__handle'></b>
+        </div>
+      <% end %>
+      <%= f.submit 'Save Blog', class: 'button button--primary button--submit' %>
+      
+    </div>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.bootsy_area :content, placeholder: 'blog article', editor_options: { blockquote: true, image: false } %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Save Blog', class: 'button button--primary' %>
+  </div>
+</div>
+
+<% end %>

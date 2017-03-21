@@ -75,7 +75,9 @@ $grid-base: 40
 		@else if $screen == xs
 			@media screen and (max-width: 499px)
 				@content
-
+.text-primary 
+	// overwrite bs
+	:color #333 !important
 .wrapper
 	@extend %make-adaptive
 	:box-sizing border-box
@@ -607,6 +609,7 @@ section.social
 			:font-size 13px
 			:text-transform uppercase
 			:transition 0.3s all ease
+			:font-weight normal
 		textarea
 			:border 2px solid black
 			:width 100%
@@ -675,6 +678,14 @@ footer
 			:color $gold	
 		a:last-of-type
 			:margin-right 0	
+.login--wrapper
+	:max-width 400px			
+	input[type="email"], input[type="password"]
+		:width 100%
+		:border 1px solid #ddd
+		:padding 10px
+	input[type="submit"]	
+		:width 100%
 			
 
 

@@ -1,0 +1,137 @@
+@import 'variables'
+=display-for($size: false)
+	@each $screen in $size
+		@if $screen == xl
+			@media screen and (min-width: 1170px)
+				@content
+		@else if $screen == lg
+			@media screen and (min-width: 960px) and (max-width: 1169px)
+				@content
+		@if $screen == md
+			@media screen and (min-width: 768px) and (max-width: 959px)
+				@content
+		@else if $screen == sm
+			@media screen and (min-width: 500px) and (max-width: 767px)
+				@content
+		@else if $screen == xs
+			@media screen and (max-width: 499px)
+				@content
+.blog--wrapper 
+	:display flex
+	:flex-wrap wrap
+	a 
+		:width 32%
+		:margin-right calc( (100% - (32% * 3)) / 2 )
+		:background #0B0B0B
+		:margin-bottom calc( (100% - (32% * 3)) / 2 )
+		+display-for(sm xs)
+			:width 100%
+			:margin-right 0
+	a:nth-of-type(3n + 3)	
+		:margin-right 0
+	a:nth-of-type(1), a:nth-of-type(2), a:nth-of-type(3)	
+		:margin-top calc( (100% - (32% * 3)) / 2 )
+	img 
+		:width 100%	
+	figure 
+		:margin 0
+		:position relative
+		:width 100%
+		:height 100%
+		:display flex
+		:align-items center
+		&:hover figcaption
+			:opacity 1
+		figcaption
+			:transition 0.2s all ease
+			:position absolute
+			:top 0
+			:left 0
+			:right 0
+			:bottom 0
+			:background $transpurple
+			:display flex
+			:opacity 0
+			h2 
+				:margin auto
+				:color white
+				:font-weight 100
+				:font-size 28px
+.blog--title
+	:text-align center
+	:margin-top 80px
+	:margin-bottom 60px
+.blog-single--wrapper
+	:max-width 800px
+	:margin-top 60px
+	:margin-bottom 80px
+	:font-size 18px
+	:line-height 28px
+	a 
+		:transition 0.1s all ease
+		:color #333
+		:border-bottom 2px solid $transgold 
+		:box-shadow inset 0 -4px 0 $transgold
+		&:hover
+			:background $transgold
+	.blog-single--title
+		:text-align center
+		:margin-bottom 60px
+		h2 
+			:margin-top 40px
+		img 
+			:max-width 600px
+.blog--list
+	:list-style none
+	:margin 0
+	:padding 0
+	:display flex
+	:flex-wrap wrap
+	li 
+		:width calc(100% / 6)
+		:padding 10px
+.blog--list-header, .blog--list-body li
+	:border-bottom 1px solid #DDD
+.edit_blog
+	:margin-bottom 80px
+.blog--edit-title	
+	:display flex
+	:align-items center
+	:margin-top 40px
+	:margin-bottom 60px
+	:justify-content space-between
+.blog--title-field
+	:flex-grow 1
+	input
+		:width 70%
+		:padding 10px
+		:margin-bottom 20px
+.blog--form
+	.wrapper--flex
+		:align-items center
+	.button--submit 
+		:margin-left 12px	
+blockquote
+	:border-left 0px
+	:color $purple
+	:font-family $title-font
+	:font-size 24px
+	:font-weight bold
+	:line-height 38px
+	:width 80%
+	:position relative
+	:margin-bottom 0
+	&:before
+		:content '“'
+		:position absolute
+		:font-size 200px
+		:color rgba(37,20,57,0.1)
+		:z-index -1
+		:top 68px
+		:left -26px
+	
+
+
+		
+
+

@@ -1,0 +1,9 @@
+<div class="wrapper blog-single--wrapper">
+	<div class="blog-single--title">	
+		<img src="<%= @blog.gram_photo%>" alt="">
+		<h2><%= @blog.title %></h2>
+	</div>
+	<%= @blog.content.html_safe %>
+</div>
+
+

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
+  resources :blogs
+  devise_for :users
   resources :requested_quotes
   resources :facebooks
   resources :grams
@@ -12,6 +15,8 @@ Rails.application.routes.draw do
   get 'upload_grams' => 'grams#upload'
   get 'upload_tweets' => 'tweets#upload'
   get 'upload_fbs' => 'facebooks#upload'
+
+  get 'blog_home' => 'pages#blog'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -2,9 +2,12 @@
 <html>
 <head>
   <title>Triumph Capital Limited</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.png' %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,9 +23,123 @@
   <meta name="twitter:image" content="<%= asset_path('social-img.png')%>" />
 </head>
 <body>
+  <nav>
+    <div class="wrapper wrapper--flex">
+      <a href="#" class="col--two">
+        <%= image_tag 'logo.png', class:'logo-main'%>
+      </a>
+      <a href="#" class="main--toggle">
+        <span></span>
+      </a>
+      <ul class="wrapper--flex col--two menu--main">
+        <li><%= link_to 'About', root_path(:anchor => 'about')%></li>
+        <li><%= link_to 'Services', root_path(:anchor => 'services')%></li>
+        <li><%= link_to 'Contact', root_path(:anchor => 'contact')%></li>
+        <li><%= link_to 'Blog', blog_home_path%></li>
+        <li><%= link_to 'Request a Consultation', root_path(:anchor => 'request')%></li>
+        <% if user_signed_in? %>
+          <li><%= link_to 'Edit Blogs', blogs_path %></li>
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
 
-<%= yield %>
+  <%= yield %>
 
-<script src="https://use.fontawesome.com/af8077e440.js"></script>
+  <script src="https://use.fontawesome.com/af8077e440.js"></script>
+
+ <script>
+
+  var vid = document.getElementById("bgvid");
+  var pauseButton = document.querySelector("#polina button");
+  var windowSize = $(window).innerWidth();
+
+  function vidFade() {
+    vid.classList.add("stopfade");
+  }
+
+
+  var windowSize = $(window).innerWidth();
+  (function($,sr){
+    var debounce = function (func, threshold, execAsap) {
+        var timeout;
+
+        return function debounced () {
+            var obj = this, args = arguments;
+            function delayed () {
+                if (!execAsap)
+                    func.apply(obj, args);
+                timeout = null;
+            };
+
+            if (timeout)
+                clearTimeout(timeout);
+            else if (execAsap)
+                func.apply(obj, args);
+
+            timeout = setTimeout(delayed, threshold || 100);
+        };
+    }
+    // smartresize 
+    jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+
+  })(jQuery,'smartresize');
+  
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+
+    $('input[type=text], input[type=email]').on('click, focus', function(){
+      var label_name = $(this).attr('id')
+      var label = $("label[for='"+label_name+"']")
+      $(label).css('top', '-20px')
+
+    });
+
+    $('input[type=text], input[type=email]').on('blur', function(){
+      if($(this).val().length < 1){
+        var label_name = $(this).attr('id')
+        var label = $("label[for='"+label_name+"']")
+        $(label).css('top', '0')
+      }
+    });
+
+    $('.main--toggle').on('click', function(e){
+      e.preventDefault()
+      $(this).toggleClass('active');
+      $('.menu--main').slideToggle('normal')
+      $('.menu--main').hasClass('.active') ? $('.menu--main').removeClass('.active') : $('.menu--main').addClass('.active')
+    });
+
+    function mainMenuSmall(){
+      if(windowSize <= 959 ){
+        $('.menu--main').hasClass('.active') ? null : $('.menu--main').css('display', 'none')
+      }else{
+        $('.menu--main').css('display', 'flex').addClass('active')
+      }
+    }
+
+    var theWidth = $(window).width();
+    $(window).smartresize(function(){
+      if($(this).width() != theWidth){
+        windowSize = $(window).innerWidth()
+        mainMenuSmall()
+        theWidth = $(this).width()
+      }
+    });
+
+    mainMenuSmall()
+  
+ </script>
 </body>
 </html>

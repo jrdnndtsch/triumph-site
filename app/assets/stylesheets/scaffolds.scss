@@ -1,3 +1,24 @@
+iframe {
+	width: 100% !important;
+	height: 600px !important;
+	max-width: 800px;
+	border: 1px solid #ccc !important;
+}
+
+.wysihtml5-toolbar {
+	li {
+		a {
+			border-radius: 0px !important;
+		}
+	}
+}
+
+a:hover {
+	text-decoration: none !important;
+}
+
+
+
 // body {
 //   background-color: #fff;
 //   color: #333;

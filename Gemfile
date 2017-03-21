@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 
-gem 'instagram'
+gem 'instagram', '1.1.6'
 gem 'twitter'
 gem 'rails_autolink'
 gem 'rinku'
@@ -16,6 +16,14 @@ gem 'open_uri_redirections'
 # facebook api
 gem "koala", "~> 2.2"
 gem 'json'
+
+#User authentication
+gem 'devise', '4.2.0'
+
+#wisywig
+gem 'bootsy', :git => 'https://github.com/jrdnndtsch/bootsy-2.3.1-blockquote.git', :branch => 'master'
+
+gem 'bootstrap-sass', '~> 3.3.6'
 
 gem "autoprefixer-rails"
 

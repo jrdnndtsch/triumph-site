@@ -15,6 +15,13 @@ task :update_feed => :environment do
 	  this_insta.update({text: insta.caption.text, image_url: insta.images.standard_resolution.url})
 	  this_insta.save
 	end 
+  #pull in instas for blogs
+  @instas.each do |insta|
+    image_url = insta.images.standard_resolution.url
+    if !Blog.where(gram_photo: image_url).present?
+      Blog.create(gram_photo: image_url)
+    end
+  end   
 
 	client = Koala::Facebook::API.new(ENV['fb_access_token'])
     posts = client.get_connection('triumphcapitallimited', 'posts',
@@ -32,10 +39,10 @@ task :update_feed => :environment do
         re_title = re.css("meta[property='og:title']")
         re_desc  = re.css("meta[property='og:description']")
 
-        if re_image.present? && re_title.present?
+        if re_image.present? && re_title.present? 
           re_image_string = re_image.at('meta')['content']
           re_title_string = re_title.at('meta')['content']
-          re_desc_string  = re_desc.at('meta')['content'] re_desc_string.present?
+          re_desc_string  = re_desc.at('meta')['content'] if re_desc.present?
 
           id_count += 1
 

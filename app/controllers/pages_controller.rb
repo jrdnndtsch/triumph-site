@@ -23,4 +23,8 @@ class PagesController < ApplicationController
       RequestQuote.new_quote_request(@first, @last, @email, @phone, @comment).deliver
     end  
   end
+
+  def blog
+    @blogs = Blog.is_published
+  end
 end

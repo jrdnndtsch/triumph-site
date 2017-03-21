@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<div class="wrapper">
+  <h1>Listing Blogs</h1>
+  <ul class="blog--list blog--list-header">
+    <li>image</li>
+    <li>title</li>
+    <li>published</li>
+  </ul>
+  <ul class="blog--list blog--list-body">
+    <% @blogs.each do |blog| %>
+      <li><img src="<%= blog.gram_photo%>" alt=""></li>
+      <li><%= blog.title %></li>
+      <li><%= blog.published%></li>
+      <li><%= link_to 'Show', blog %></li>
+      <li><%= link_to 'Edit', edit_blog_path(blog) %></li>
+      <li><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    <% end %>
+  </ul>
+
+
+  <%= link_to 'New Blog', new_blog_path %>
+</div>
