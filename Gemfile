@@ -20,6 +20,9 @@ gem 'json'
 #User authentication
 gem 'devise', '4.2.0'
 
+# testing mail
+gem "letter_opener"
+
 #wisywig
 gem 'bootsy', :git => 'https://github.com/jrdnndtsch/bootsy-2.3.1-blockquote.git', :branch => 'master'
 

@@ -1,8 +1,8 @@
 require "rails_helper"
 
-RSpec.describe RequestQuote, type: :mailer do
+RSpec.describe RequestedQuote, type: :mailer do
   describe "new_quote_request" do
-    let(:mail) { RequestQuote.new_quote_request }
+    let(:mail) { RequestedQuote.new_quote_request }
 
     it "renders the headers" do
       expect(mail.subject).to eq("New quote request")

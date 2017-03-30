@@ -25,9 +25,13 @@ class RequestedQuotesController < ApplicationController
   # POST /requested_quotes.json
   def create
     @requested_quote = RequestedQuote.new(requested_quote_params)
-
     respond_to do |format|
       if @requested_quote.save
+        begin
+          RequestedQuoteMailer.new_quote_request(params[:requested_quote][:first_name], params[:requested_quote][:last_name], params[:requested_quote][:email], params[:requested_quote][:phone], params[:requested_quote][:comments]).deliver_later!
+        rescue Errno::ECONNREFUSED
+          logger.info "!!! Warning: Failed to deliver email, skipping"
+        end
         format.html { redirect_to root_path, notice: 'Requested quote was successfully created.' }
         format.json { render :show, status: :created, location: @requested_quote }
       else
