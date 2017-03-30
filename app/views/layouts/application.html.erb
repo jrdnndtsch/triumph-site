@@ -25,9 +25,9 @@
 <body>
   <nav>
     <div class="wrapper wrapper--flex">
-      <a href="#" class="col--two">
-        <%= image_tag 'logo.png', class:'logo-main'%>
-      </a>
+        <%= link_to root_path do %>
+          <%= image_tag 'logo.png', class:'logo-main'%>
+        <% end %>
       <a href="#" class="main--toggle">
         <span></span>
       </a>

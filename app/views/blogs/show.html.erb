@@ -3,7 +3,7 @@
 		<img src="<%= @blog.gram_photo%>" alt="">
 		<h2><%= @blog.title %></h2>
 	</div>
-	<%= @blog.content.html_safe %>
+	<%= @blog.content.try(:html_safe) %>
 </div>
 
 
