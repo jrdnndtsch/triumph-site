@@ -1,0 +1,4307 @@
+/*
+  Bootstrap-submenu
+*/
+
+
+.dropdown-submenu {
+  position:relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display:block;
+}
+
+.dropdown-submenu > a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+
+.dropdown-submenu:hover > a:after {
+  border-left-color: #ffffff;
+}
+
+.dropdown-submenu.pull-left {
+  float:none;
+}
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+
+/*
+  Bootstrap-wysihtml5
+*/
+
+ul.wysihtml5-toolbar {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+ul.wysihtml5-toolbar::after {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+ul.wysihtml5-toolbar > li {
+  float: left;
+  display: list-item;
+  list-style: none;
+  margin: 0 5px 10px 0;
+}
+
+ul.wysihtml5-toolbar a[data-wysihtml5-command=bold] {
+  font-weight: bold;
+}
+
+ul.wysihtml5-toolbar a[data-wysihtml5-command=italic] {
+  font-style: italic;
+}
+
+ul.wysihtml5-toolbar a[data-wysihtml5-command=underline] {
+  text-decoration: underline;
+}
+
+ul.wysihtml5-toolbar a.btn.wysihtml5-command-active {
+  background-image: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15),0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #E6E6E6;
+  background-color: #D9D9D9;
+  outline: 0;
+}
+
+ul.wysihtml5-commands-disabled .dropdown-menu {
+  display: none !important;
+}
+
+ul.wysihtml5-toolbar div.wysihtml5-colors {
+  display:block;
+  width: 50px;
+  height: 20px;
+  margin-top: 2px;
+  margin-left: 5px;
+  position: absolute;
+  pointer-events: none;
+}
+
+ul.wysihtml5-toolbar a.wysihtml5-colors-title {
+  padding-left: 70px;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="black"] {
+  background: black !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="silver"] {
+  background: silver !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="gray"] {
+  background: gray !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="maroon"] {
+  background: maroon !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="red"] {
+  background: red !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="purple"] {
+  background: purple !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="green"] {
+  background: green !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="olive"] {
+  background: olive !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="navy"] {
+  background: navy !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="blue"] {
+  background: blue !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
+  background: orange !important;
+}
+
+/*
+  Bootsy
+*/
+
+.wysiwyg-color-black {
+  color: black;
+}
+
+.wysiwyg-color-silver {
+  color: silver;
+}
+
+.wysiwyg-color-gray {
+  color: gray;
+}
+
+.wysiwyg-color-white {
+  color: white;
+}
+
+.wysiwyg-color-maroon {
+  color: maroon;
+}
+
+.wysiwyg-color-red {
+  color: red;
+}
+
+.wysiwyg-color-purple {
+  color: purple;
+}
+
+.wysiwyg-color-fuchsia {
+  color: fuchsia;
+}
+
+.wysiwyg-color-green {
+  color: green;
+}
+
+.wysiwyg-color-lime {
+  color: lime;
+}
+
+.wysiwyg-color-olive {
+  color: olive;
+}
+
+.wysiwyg-color-orange {
+  color: orange;
+}
+
+.wysiwyg-color-yellow {
+  color: yellow;
+}
+
+.wysiwyg-color-navy {
+  color: navy;
+}
+
+.wysiwyg-color-blue {
+  color: blue;
+}
+
+.wysiwyg-color-teal {
+  color: teal;
+}
+
+.wysiwyg-color-aqua {
+  color: aqua;
+}
+
+.wysiwyg-float-left {
+  float: left;
+  margin: 0 8px 8px 0;
+}
+
+.wysiwyg-float-right {
+  float: right;
+  margin: 0 0 8px 8px;
+}
+
+.bootsy blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #eee;
+}
+.bootsy blockquote p:last-child,
+.bootsy blockquote ul:last-child,
+.bootsy blockquote ol:last-child {
+  margin-bottom: 0;
+}
+.bootsy blockquote footer,
+.bootsy blockquote small,
+.bootsy blockquote .small {
+  display: block;
+  font-size: 80%;
+  line-height: 1.42857143;
+  color: #777;
+}
+.bootsy blockquote footer:before,
+.bootsy blockquote small:before,
+.bootsy blockquote .small:before {
+  content: '\2014 \00A0';
+}
+.bootsy .blockquote-reverse,
+.bootsy blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  text-align: right;
+  border-right: 5px solid #eee;
+  border-left: 0;
+}
+.bootsy .blockquote-reverse footer:before,
+.bootsy blockquote.pull-right footer:before,
+.blockquote-reverse small:before,
+.bootsy blockquote.pull-right small:before,
+.bootsy .blockquote-reverse .small:before,
+.bootsy blockquote.pull-right .small:before {
+  content: '';
+}
+.bootsy .blockquote-reverse footer:after,
+.bootsy blockquote.pull-right footer:after,
+.bootsy .blockquote-reverse small:after,
+.bootsy blockquote.pull-right small:after,
+.bootsy .blockquote-reverse .small:after,
+.bootsy blockquote.pull-right .small:after {
+  content: '\00A0 \2014';
+}
+.bootsy blockquote:before,
+.bootsy blockquote:after {
+  content: "";
+}
+
+textarea.bootsy:required:invalid {
+  color: inherit;
+}
+
+/*Modal Design Styles*/
+
+.bootsy-modal .file-input-name {display: none;}  /*Hide the input file name from showing as it's not needed and ruins design*/
+
+/*Set a min-height on the modal body to prevent jumping up and down of modal when adding content*/
+.bootsy-modal .modal-body {
+  min-height: 120px;
+}
+
+.bootsy-image {
+  margin-bottom: 15px;
+}
+
+.bootsy-upload-loader {
+  margin: 0 10px -10px 0;
+}
+
+.bootsy-upload-spacer {
+  padding: 0 10px 0 10px;
+}
+
+.bootsy-gallery-loader {
+  display: block;
+  margin: 0 auto;
+}
+
+/*The below code is needed for capybara to be able to find the input, as it*/
+/*does not work*/
+.file-input-wrapper input[type=file], .file-input-wrapper input[type=file]:focus, .file-input-wrapper input[type=file]:hover {
+  opacity: .01;
+}
+
+/* Avoid Boostrap input borders */
+body.bootsy_text_area.form-control {
+  border: none;
+  box-shadow: none;
+}
+@charset "UTF-8";
+/* line 19, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/* line 22, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--wrapper a {
+  width: 32%;
+  margin-right: calc( (100% - (32% * 3)) / 2 );
+  background: #0B0B0B;
+  margin-bottom: calc( (100% - (32% * 3)) / 2 );
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 22, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+  .blog--wrapper a {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 22, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+  .blog--wrapper a {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+/* line 30, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--wrapper a:nth-of-type(3n + 3) {
+  margin-right: 0;
+}
+/* line 32, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--wrapper a:nth-of-type(1), .blog--wrapper a:nth-of-type(2), .blog--wrapper a:nth-of-type(3) {
+  margin-top: calc( (100% - (32% * 3)) / 2 );
+}
+/* line 34, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--wrapper img {
+  width: 100%;
+}
+/* line 36, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--wrapper figure {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/* line 43, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--wrapper figure:hover figcaption {
+  opacity: 1;
+}
+/* line 45, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--wrapper figure figcaption {
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(37, 20, 57, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0;
+}
+/* line 55, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--wrapper figure figcaption h2 {
+  margin: auto;
+  color: white;
+  font-weight: 100;
+  font-size: 28px;
+}
+
+/* line 60, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--title {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+/* line 64, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog-single--wrapper {
+  max-width: 800px;
+  margin-top: 60px;
+  margin-bottom: 80px;
+  font-size: 18px;
+  line-height: 28px;
+}
+/* line 70, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog-single--wrapper a {
+  -webkit-transition: 0.1s all ease;
+  transition: 0.1s all ease;
+  color: #333;
+  border-bottom: 2px solid rgba(224, 175, 29, 0.8);
+  box-shadow: inset 0 -4px 0 rgba(224, 175, 29, 0.8);
+}
+/* line 75, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog-single--wrapper a:hover {
+  background: rgba(224, 175, 29, 0.8);
+}
+/* line 77, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog-single--wrapper .blog-single--title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+/* line 80, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog-single--wrapper .blog-single--title h2 {
+  margin-top: 40px;
+}
+/* line 82, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog-single--wrapper .blog-single--title img {
+  max-width: 600px;
+}
+
+/* line 84, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/* line 90, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--list li {
+  width: calc(100% / 6);
+  padding: 10px;
+  padding-top: 30px;
+}
+
+/* line 94, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--list-header, .blog--list-body li {
+  border-bottom: 1px solid #DDD;
+}
+
+/* line 96, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.edit_blog {
+  margin-bottom: 80px;
+}
+
+/* line 98, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--edit-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 104, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--title-field {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+/* line 106, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--title-field input {
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* line 111, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--form .wrapper--flex {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center;
+}
+/* line 113, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--form .button--submit {
+  margin-left: 12px;
+}
+
+/* line 115, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+blockquote {
+  border-left: 0px;
+  color: #251439;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 38px;
+  width: 80%;
+  position: relative;
+  margin-bottom: 0;
+}
+/* line 125, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+blockquote:before {
+  content: "“";
+  position: absolute;
+  font-size: 200px;
+  color: rgba(37, 20, 57, 0.1);
+  z-index: -1;
+  top: 68px;
+  left: -26px;
+}
+
+/* line 134, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.pagination {
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-size: 18px;
+  display: block;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* line 141, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog-thumbnail {
+  width: 200px;
+  margin-bottom: 40px;
+}
+/* line 5, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+/* line 8, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* line 10, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.6rem;
+  margin: 0;
+}
+
+/* line 15, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+img {
+  width: 100%;
+}
+
+@media screen and (min-width: 1170px) {
+  /* line 29, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    width: 1146px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1169px) {
+  /* line 29, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    width: 936px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 29, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    width: 744px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 29, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    width: 480px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 29, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    width: auto;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+/* line 78, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.text-primary {
+  color: #333 !important;
+}
+
+/* line 81, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.wrapper {
+  box-sizing: border-box;
+  position: relative;
+}
+@media screen and (min-width: 1170px) {
+  /* line 81, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1169px) {
+  /* line 81, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 81, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 81, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 81, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    margin: 0;
+    padding: 0 12px;
+  }
+}
+/* line 90, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.wrapper--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+}
+
+/* line 97, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.wrapper .col--two, .wrapper--flex .col--two {
+  box-sizing: border-box;
+  width: 50%;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 97, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper .col--two, .wrapper--flex .col--two {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 97, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper .col--two, .wrapper--flex .col--two {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+/* line 101, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.wrapper .col--four, .wrapper--flex .col--four {
+  box-sizing: border-box;
+  width: 25%;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 101, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper .col--four, .wrapper--flex .col--four {
+    box-sizing: border-box;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 101, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper .col--four, .wrapper--flex .col--four {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+/* line 107, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.wrapper .col--five, .wrapper--flex .col--five {
+  box-sizing: border-box;
+  width: 20%;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 107, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper .col--five, .wrapper--flex .col--five {
+    box-sizing: border-box;
+    width: 33.325%;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 107, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper .col--five, .wrapper--flex .col--five {
+    box-sizing: border-box;
+    width: 33.325%;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 107, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper .col--five, .wrapper--flex .col--five {
+    box-sizing: border-box;
+    width: 50%;
+  }
+}
+
+/* line 116, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+section {
+  padding: 140px 0;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 116, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  section {
+    padding: 80px 0;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 116, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  section {
+    padding: 80px 0;
+  }
+}
+
+/* line 122, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+h2, h3, h4 {
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-weight: normal;
+}
+
+/* line 125, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+h2 {
+  font-size: 4rem;
+  line-height: 4.4rem;
+}
+@media screen and (max-width: 499px) {
+  /* line 125, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  h2 {
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+  }
+}
+
+/* line 131, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+h3 {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+@media screen and (max-width: 499px) {
+  /* line 131, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  h3 {
+    font-size: 2.2rem;
+    line-height: 2.4rem;
+  }
+}
+
+/* line 137, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+h4 {
+  font-size: 1.8rem;
+  line-height: 2rem;
+}
+
+/* line 140, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+a {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+/* line 143, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.text-primary, .text-secondary {
+  letter-spacing: 0.4;
+  line-height: 3.2rem;
+  font-size: 1.85rem;
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* line 150, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.text-primary {
+  font-family: "Georgia", serif;
+  font-style: italic;
+}
+
+/* line 153, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+h2.hl {
+  color: #E0AF1D;
+  font-weight: bold;
+}
+
+/* line 157, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.button {
+  border: none;
+  padding: 10px 12px 8px 12px;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  cursor: pointer;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 1.2px;
+}
+
+/* line 165, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.button--primary {
+  border: 2px solid #E0AF1D;
+  background: #E0AF1D;
+  color: white;
+}
+
+/* line 169, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.button--primary:hover {
+  background: white;
+  color: #E0AF1D;
+}
+
+/* line 172, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.button--edit {
+  border: 2px solid #16a085;
+  background: #16a085;
+  color: white;
+}
+
+/* line 176, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.button--edit:hover {
+  background: white;
+  color: #16a085;
+}
+
+/* line 179, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.button--danger {
+  border: 2px solid #c0392b;
+  background: #c0392b;
+  color: white;
+}
+
+/* line 183, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.button--danger:hover {
+  background: white;
+  color: #c0392b;
+}
+
+/* line 188, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.logo-main {
+  width: 240px;
+}
+
+/* line 190, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+nav {
+  background: #251439;
+  padding: 12px 0;
+  width: 100%;
+  z-index: 10;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 196, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .wrapper {
+    margin: 0;
+    padding: 0 20px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 196, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .wrapper {
+    margin: 0;
+    padding: 0 20px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 196, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .wrapper {
+    margin: 0;
+    padding: 0 20px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 201, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav a.col--two {
+    width: 80% !important;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 201, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav a.col--two {
+    width: 80% !important;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 201, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav a.col--two {
+    width: 80% !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 204, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .menu--main {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 204, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .menu--main {
+    display: none;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 204, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .menu--main {
+    display: none;
+  }
+}
+/* line 208, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 208, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul {
+    position: absolute;
+    background: #251439;
+    top: 55px;
+    margin: 0;
+    padding: 40px 0 20px;
+    width: 100% !important;
+    left: 0;
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 208, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul {
+    position: absolute;
+    background: #251439;
+    top: 55px;
+    margin: 0;
+    padding: 40px 0 20px;
+    width: 100% !important;
+    left: 0;
+    z-index: 1;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 208, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul {
+    position: absolute;
+    background: #251439;
+    top: 55px;
+    margin: 0;
+    padding: 40px 0 20px;
+    width: 100% !important;
+    left: 0;
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 221, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 221, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 221, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* line 226, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+nav ul a {
+  text-decoration: none;
+  color: white;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 226, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul a {
+    padding: 20px;
+    display: block;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 226, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul a {
+    padding: 20px;
+    display: block;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 226, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul a {
+    padding: 20px;
+    display: block;
+  }
+}
+/* line 235, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+nav ul a:hover {
+  color: #E0AF1D;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 235, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul a:hover {
+    background: #E0AF1D;
+    color: white;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 235, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul a:hover {
+    background: #E0AF1D;
+    color: white;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 235, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul a:hover {
+    background: #E0AF1D;
+    color: white;
+  }
+}
+/* line 240, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+nav .main--toggle {
+  display: none;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 240, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle {
+    float: right;
+    display: block;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    padding: 12px 0 18px;
+  }
+  /* line 248, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle:hover:before {
+    -webkit-transform: translate3d(0, -1px, 0);
+            transform: translate3d(0, -1px, 0);
+  }
+  /* line 250, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle:hover:after {
+    -webkit-transform: translate3d(0, 1px, 0);
+            transform: translate3d(0, 1px, 0);
+  }
+  /* line 252, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle:before, nav .main--toggle:after {
+    content: " ";
+    width: 32px;
+    height: 2px;
+    background: white;
+    display: block;
+    margin-top: 6px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  /* line 261, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle span {
+    width: 32px;
+    height: 2px;
+    margin-top: 6px;
+    display: block;
+    background: white;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 240, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle {
+    float: right;
+    display: block;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    padding: 12px 0 18px;
+  }
+  /* line 248, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle:hover:before {
+    -webkit-transform: translate3d(0, -1px, 0);
+            transform: translate3d(0, -1px, 0);
+  }
+  /* line 250, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle:hover:after {
+    -webkit-transform: translate3d(0, 1px, 0);
+            transform: translate3d(0, 1px, 0);
+  }
+  /* line 252, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle:before, nav .main--toggle:after {
+    content: " ";
+    width: 32px;
+    height: 2px;
+    background: white;
+    display: block;
+    margin-top: 6px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  /* line 261, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle span {
+    width: 32px;
+    height: 2px;
+    margin-top: 6px;
+    display: block;
+    background: white;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 240, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle {
+    float: right;
+    display: block;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    padding: 12px 0 18px;
+  }
+  /* line 248, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle:hover:before {
+    -webkit-transform: translate3d(0, -1px, 0);
+            transform: translate3d(0, -1px, 0);
+  }
+  /* line 250, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle:hover:after {
+    -webkit-transform: translate3d(0, 1px, 0);
+            transform: translate3d(0, 1px, 0);
+  }
+  /* line 252, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle:before, nav .main--toggle:after {
+    content: " ";
+    width: 32px;
+    height: 2px;
+    background: white;
+    display: block;
+    margin-top: 6px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  /* line 261, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle span {
+    width: 32px;
+    height: 2px;
+    margin-top: 6px;
+    display: block;
+    background: white;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 268, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active {
+    padding: 11px 0 17px;
+  }
+  /* line 271, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active span {
+    opacity: 0;
+    width: 28px;
+    height: 4px;
+    -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+            transform: translate3d(0, 0, 0) rotate(45deg);
+  }
+  /* line 276, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active:before {
+    -webkit-transform: translate3d(0, 8px, 0) rotate(45deg);
+            transform: translate3d(0, 8px, 0) rotate(45deg);
+    width: 22px;
+    height: 2px;
+  }
+  /* line 280, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active:after {
+    -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+            transform: translate3d(0, -10px, 0) rotate(-45deg);
+    width: 22px;
+    height: 2px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 268, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active {
+    padding: 11px 0 17px;
+  }
+  /* line 271, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active span {
+    opacity: 0;
+    width: 28px;
+    height: 4px;
+    -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+            transform: translate3d(0, 0, 0) rotate(45deg);
+  }
+  /* line 276, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active:before {
+    -webkit-transform: translate3d(0, 8px, 0) rotate(45deg);
+            transform: translate3d(0, 8px, 0) rotate(45deg);
+    width: 22px;
+    height: 2px;
+  }
+  /* line 280, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active:after {
+    -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+            transform: translate3d(0, -10px, 0) rotate(-45deg);
+    width: 22px;
+    height: 2px;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 268, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active {
+    padding: 11px 0 17px;
+  }
+  /* line 271, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active span {
+    opacity: 0;
+    width: 28px;
+    height: 4px;
+    -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+            transform: translate3d(0, 0, 0) rotate(45deg);
+  }
+  /* line 276, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active:before {
+    -webkit-transform: translate3d(0, 8px, 0) rotate(45deg);
+            transform: translate3d(0, 8px, 0) rotate(45deg);
+    width: 22px;
+    height: 2px;
+  }
+  /* line 280, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active:after {
+    -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+            transform: translate3d(0, -10px, 0) rotate(-45deg);
+    width: 22px;
+    height: 2px;
+  }
+}
+
+/* line 285, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.video-container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 40px 0 40px 0;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+@media screen and (max-width: 499px) {
+  /* line 285, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .video-container {
+    padding: 80px 0 40px 0;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 285, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .video-container {
+    padding: 80px 0 40px 0;
+  }
+}
+/* line 296, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.video-container video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  z-index: -10;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-size: cover;
+  -webkit-transition: 1s opacity;
+  transition: 1s opacity;
+}
+
+/* line 310, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+header {
+  color: white;
+}
+/* line 314, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+header h2 {
+  text-align: left;
+  margin: 0 0 12px;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 499px) {
+  /* line 314, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  header h2 {
+    margin-right: 10px;
+  }
+}
+/* line 320, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+header .arrow {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+}
+/* line 325, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+header .arrow img {
+  width: 50px;
+}
+/* line 328, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+header .wrapper {
+  height: 90vh;
+  position: relative;
+}
+@media screen and (max-width: 499px) {
+  /* line 328, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  header .wrapper {
+    height: 80vh;
+  }
+}
+/* line 333, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+header .wrapper .header--text {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+}
+@media screen and (max-width: 499px) {
+  /* line 333, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  header .wrapper .header--text {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* line 342, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.about {
+  background-color: white;
+}
+/* line 344, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.about .text-primary {
+  margin-bottom: 140px;
+}
+@media screen and (max-width: 499px) {
+  /* line 344, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .about .text-primary {
+    margin-bottom: 80px;
+  }
+}
+/* line 349, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.about .col--two:nth-of-type(2n + 2) {
+  padding: 0 30px;
+}
+@media screen and (max-width: 499px) {
+  /* line 349, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .about .col--two:nth-of-type(2n + 2) {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 353, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .about .col--two:nth-of-type(2n + 1) {
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 22px;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 353, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .about .col--two:nth-of-type(2n + 1) {
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 22px;
+  }
+}
+/* line 358, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.about .wrapper--flex {
+  margin-bottom: 60px;
+}
+/* line 360, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.about .wrapper--flex:nth-of-type(2) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+/* line 363, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.about .wrapper--flex:nth-of-type(2) .col--two:nth-of-type(2n + 2) {
+  padding-left: 0;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 363, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .about .wrapper--flex:nth-of-type(2) .col--two:nth-of-type(2n + 2) {
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 363, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .about .wrapper--flex:nth-of-type(2) .col--two:nth-of-type(2n + 2) {
+    padding: 0;
+  }
+}
+
+/* line 371, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.people {
+  background: #F7F7F7;
+}
+/* line 373, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.people img {
+  border-radius: 50%;
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+/* line 380, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.people .wrapper--flex:nth-of-type(1) {
+  margin-bottom: 60px;
+}
+/* line 382, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.people .wrapper--flex:nth-of-type(1) .col--img {
+  padding-left: 80px;
+}
+/* line 384, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.people .wrapper--flex:nth-of-type(2) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+/* line 386, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.people .wrapper--flex:nth-of-type(2) .col--img {
+  padding-right: 80px;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 388, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .people .wrapper--flex .col--img {
+    padding: 0 !important;
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 388, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .people .wrapper--flex .col--img {
+    padding: 0 !important;
+    margin: 20px;
+  }
+}
+
+/* line 394, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.services {
+  background-color: white;
+}
+/* line 396, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.services h2 {
+  text-align: center;
+}
+/* line 398, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.services h3 {
+  margin: 0 0 18px 0;
+}
+@media screen and (max-width: 499px) {
+  /* line 398, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .services h3 {
+    text-align: center;
+  }
+}
+/* line 402, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.services .text-secondary {
+  margin-bottom: 80px;
+}
+/* line 404, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.services i {
+  height: 60px;
+  width: 60px;
+  border: 2px solid #E0AF1D;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 20px;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  cursor: pointer;
+}
+@media screen and (max-width: 499px) {
+  /* line 404, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .services i {
+    margin: 0 auto 20px;
+  }
+}
+/* line 418, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.services .wrapper--flex {
+  width: 80%;
+  margin: 0 auto 48px;
+}
+/* line 421, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.services .wrapper--flex p {
+  color: #666666;
+}
+/* line 423, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.services .wrapper--flex div {
+  width: calc(100% - 100px);
+}
+@media screen and (max-width: 499px) {
+  /* line 423, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .services .wrapper--flex div {
+    width: 100%;
+  }
+}
+
+/* line 428, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+section.social {
+  padding: 0;
+  background-color: #0B0B0B;
+}
+
+/* line 431, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.social-element {
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* line 434, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.social-element:nth-of-type(2n+5) {
+  background-color: #F9C320;
+}
+/* line 436, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.social-element:nth-of-type(8n+1) {
+  background-color: #E0AF1D;
+}
+/* line 438, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.social-element:nth-of-type(3) {
+  background-color: #AD8716;
+}
+/* line 440, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.social-element:nth-of-type(6) {
+  -webkit-box-ordinal-group: 8;
+      -ms-flex-order: 7;
+          order: 7;
+}
+/* line 442, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.social-element:nth-of-type(7) {
+  -webkit-box-ordinal-group: 7;
+      -ms-flex-order: 6;
+          order: 6;
+}
+/* line 444, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.social-element:nth-of-type(8) {
+  -webkit-box-ordinal-group: 10;
+      -ms-flex-order: 9;
+          order: 9;
+}
+/* line 446, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.social-element:nth-of-type(9) {
+  -webkit-box-ordinal-group: 9;
+      -ms-flex-order: 8;
+          order: 8;
+}
+/* line 448, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.social-element:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 453, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(1) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  /* line 455, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(2) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  /* line 457, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(3) {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  /* line 459, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(4) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  /* line 461, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(5) {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  /* line 463, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(6) {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+  /* line 465, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(7) {
+    -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+            order: 7;
+  }
+  /* line 467, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(8) {
+    -webkit-box-ordinal-group: 9;
+        -ms-flex-order: 8;
+            order: 8;
+  }
+  /* line 469, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(9) {
+    -webkit-box-ordinal-group: 10;
+        -ms-flex-order: 9;
+            order: 9;
+  }
+  /* line 471, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(10) {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 453, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(1) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  /* line 455, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(2) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  /* line 457, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(3) {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  /* line 459, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(4) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  /* line 461, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(5) {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  /* line 463, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(6) {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+  /* line 465, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(7) {
+    -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+            order: 7;
+  }
+  /* line 467, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(8) {
+    -webkit-box-ordinal-group: 9;
+        -ms-flex-order: 8;
+            order: 8;
+  }
+  /* line 469, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(9) {
+    -webkit-box-ordinal-group: 10;
+        -ms-flex-order: 9;
+            order: 9;
+  }
+  /* line 471, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(10) {
+    display: none;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 475, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(1) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  /* line 477, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(2) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  /* line 479, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(3) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  /* line 481, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(4) {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  /* line 483, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(5) {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  /* line 485, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(6) {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+  /* line 487, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(7) {
+    -webkit-box-ordinal-group: 9;
+        -ms-flex-order: 8;
+            order: 8;
+  }
+  /* line 489, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(8) {
+    -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+            order: 7;
+  }
+  /* line 491, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(9) {
+    -webkit-box-ordinal-group: 10;
+        -ms-flex-order: 9;
+            order: 9;
+  }
+  /* line 493, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(10) {
+    -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+            order: 10;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  /* line 495, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element.col--four {
+    width: 50% !important;
+  }
+}
+
+/* line 498, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.instagram {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* line 505, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.wrapper--flex.tweet-flex {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/* line 507, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.tweet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  padding: 0 20px;
+  height: 80%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: white;
+  font-size: 16px;
+  font-family: "Georgia";
+}
+/* line 521, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.tweet p {
+  line-height: 28px;
+}
+@media screen and (min-width: 960px) and (max-width: 1169px) {
+  /* line 507, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet {
+    padding: 0px 15px;
+    height: 80%;
+  }
+  /* line 526, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet p {
+    line-height: 18px;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 507, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet {
+    padding: 0px 15px;
+    height: 80%;
+  }
+  /* line 526, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet p {
+    line-height: 18px;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 507, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet {
+    padding: 0 15px;
+    height: 90%;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 507, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet {
+    padding: 0 15px;
+    height: 90%;
+  }
+}
+/* line 532, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.tweet a {
+  color: white;
+  font-weight: bold;
+  word-break: break-all;
+  display: inline-block;
+}
+/* line 538, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.tweet p {
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 18px;
+}
+@media screen and (min-width: 960px) and (max-width: 1169px) {
+  /* line 538, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet p {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 538, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet p {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 538, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 538, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet p {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+}
+
+/* line 554, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.square {
+  position: relative;
+  border: 2px solid black;
+}
+
+/* line 558, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+/* line 564, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.facebook {
+  background: #F7F7F7;
+}
+/* line 566, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.facebook .wrapper--flex {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+              -ms-grid-row-align: flex-start;
+          align-items: flex-start;
+}
+/* line 568, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.facebook .col--two {
+  width: 46%;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 568, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .facebook .col--two {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 568, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .facebook .col--two {
+    width: 100%;
+  }
+}
+/* line 572, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.facebook img {
+  max-width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 572, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .facebook img {
+    height: 200px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 572, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .facebook img {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 572, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .facebook img {
+    height: 200px;
+  }
+}
+/* line 578, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.facebook a {
+  color: #111;
+}
+/* line 580, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.facebook a:hover {
+  color: #E0AF1D;
+}
+/* line 582, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.facebook p {
+  margin-bottom: 0;
+  word-break: break-word;
+}
+
+/* line 587, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.contact {
+  background-color: white;
+  background: #E0AF1D;
+  padding: 0;
+}
+/* line 591, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.contact .wrapper--flex {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+              -ms-grid-row-align: stretch;
+          align-items: stretch;
+}
+/* line 593, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.contact .contact--info {
+  text-align: center;
+  padding: 80px 0;
+}
+/* line 596, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.contact .contact--info p {
+  margin: 0 0 8px 0;
+}
+/* line 598, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.contact .contact--info div:first-of-type {
+  margin-bottom: 30px;
+}
+/* line 600, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.contact .contact--map {
+  background: url(/assets/map-with-marker-ba99a03f7090cb10ecf277620e61da41001d566114d861b8f586f425a13b5f70.png) center;
+  background-size: cover;
+  position: relative;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 600, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .contact .contact--map {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 600, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .contact .contact--map {
+    height: 400px;
+  }
+}
+/* line 606, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.contact .contact--map a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 613, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request {
+  background-color: white;
+}
+/* line 615, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form, .request h2 {
+  width: 80%;
+  margin: 0 auto;
+}
+/* line 618, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request h2 {
+  margin-bottom: 3.2rem;
+}
+/* line 621, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #f5e7bb inset;
+}
+/* line 623, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form label {
+  font-size: 13px;
+  text-transform: uppercase;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  font-weight: normal;
+}
+/* line 628, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form textarea {
+  border: 2px solid black;
+  width: 100%;
+}
+/* line 631, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form input[type=submit] {
+  float: right;
+}
+/* line 633, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form .comments-label {
+  padding-left: 6px;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 633, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .request form .comments-label {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 633, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .request form .comments-label {
+    padding-left: 0;
+  }
+}
+/* line 637, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form .col--two {
+  position: relative;
+}
+/* line 639, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form .col--two label {
+  position: absolute;
+  top: 0;
+  left: 6px;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 639, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .request form .col--two label {
+    left: 0;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 639, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .request form .col--two label {
+    left: 0;
+  }
+}
+/* line 645, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form .col--two input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+/* line 651, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form .col--two:nth-of-type(2n + 1) {
+  padding-right: 10px;
+}
+/* line 653, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form .col--two:nth-of-type(2n + 2) {
+  padding-left: 10px;
+}
+/* line 655, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form .col--two:nth-of-type(2n + 2) label {
+  left: 16px;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 655, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .request form .col--two:nth-of-type(2n + 2) label {
+    left: 0;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 655, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .request form .col--two:nth-of-type(2n + 2) label {
+    left: 0;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 659, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .request form .col--two:nth-of-type(2n + 2), .request form .col--two:nth-of-type(2n + 1) {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 659, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .request form .col--two:nth-of-type(2n + 2), .request form .col--two:nth-of-type(2n + 1) {
+    padding: 0;
+  }
+}
+
+/* line 663, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+footer {
+  background: #251439;
+  color: white;
+  padding: 18px 0;
+}
+/* line 667, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+footer .logo-footer {
+  width: 80px;
+  margin-right: 30px;
+}
+/* line 670, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+footer h3 {
+  font-size: 2rem;
+  margin: 0 0 12px;
+}
+/* line 673, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+footer p {
+  font-family: "Georgia", serif;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+/* line 677, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+footer div {
+  width: calc(80% - 110px);
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 677, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  footer div {
+    width: calc(100% - 110px);
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 677, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  footer div {
+    width: calc(100% - 110px);
+  }
+}
+/* line 681, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+footer div.social-links {
+  width: 20%;
+  text-align: right;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 681, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  footer div.social-links {
+    width: calc(100% - 110px);
+    margin-left: 110px;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 681, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  footer div.social-links {
+    width: calc(100% - 110px);
+    margin-left: 110px;
+    text-align: left;
+  }
+}
+/* line 688, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+footer div.social-links a {
+  color: white;
+  font-size: 2rem;
+  margin-right: 16px;
+}
+/* line 692, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+footer div.social-links a:hover {
+  color: #E0AF1D;
+}
+/* line 694, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+footer div.social-links a:last-of-type {
+  margin-right: 0;
+}
+
+/* line 696, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.login--wrapper {
+  max-width: 400px;
+}
+/* line 698, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.login--wrapper input[type="email"], .login--wrapper input[type="password"] {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+/* line 702, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.login--wrapper input[type="submit"] {
+  width: 100%;
+}
+/* line 1, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/scaffolds.scss */
+iframe {
+  width: 100% !important;
+  height: 600px !important;
+  max-width: 800px;
+  border: 1px solid #ccc !important;
+}
+
+/* line 10, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/scaffolds.scss */
+.wysihtml5-toolbar li a {
+  border-radius: 0px !important;
+}
+
+/* line 16, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  text-decoration: none !important;
+}
+@charset "UTF-8";
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ 
+
+
+
+ */
+/* line 5, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+/* line 8, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* line 10, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.6rem;
+  margin: 0;
+}
+
+/* line 15, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+img {
+  width: 100%;
+}
+
+@media screen and (min-width: 1170px) {
+  /* line 29, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    width: 1146px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1169px) {
+  /* line 29, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    width: 936px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 29, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    width: 744px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 29, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    width: 480px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 29, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    width: auto;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+/* line 78, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.text-primary {
+  color: #333 !important;
+}
+
+/* line 81, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.wrapper {
+  box-sizing: border-box;
+  position: relative;
+}
+@media screen and (min-width: 1170px) {
+  /* line 81, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1169px) {
+  /* line 81, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 81, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 81, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 81, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper {
+    margin: 0;
+    padding: 0 12px;
+  }
+}
+/* line 90, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.wrapper--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+}
+
+/* line 97, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.wrapper .col--two, .wrapper--flex .col--two {
+  box-sizing: border-box;
+  width: 50%;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 97, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper .col--two, .wrapper--flex .col--two {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 97, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper .col--two, .wrapper--flex .col--two {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+/* line 101, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.wrapper .col--four, .wrapper--flex .col--four {
+  box-sizing: border-box;
+  width: 25%;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 101, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper .col--four, .wrapper--flex .col--four {
+    box-sizing: border-box;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 101, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper .col--four, .wrapper--flex .col--four {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+/* line 107, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.wrapper .col--five, .wrapper--flex .col--five {
+  box-sizing: border-box;
+  width: 20%;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 107, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper .col--five, .wrapper--flex .col--five {
+    box-sizing: border-box;
+    width: 33.325%;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 107, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper .col--five, .wrapper--flex .col--five {
+    box-sizing: border-box;
+    width: 33.325%;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 107, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .wrapper .col--five, .wrapper--flex .col--five {
+    box-sizing: border-box;
+    width: 50%;
+  }
+}
+
+/* line 116, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+section {
+  padding: 140px 0;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 116, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  section {
+    padding: 80px 0;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 116, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  section {
+    padding: 80px 0;
+  }
+}
+
+/* line 122, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+h2, h3, h4 {
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-weight: normal;
+}
+
+/* line 125, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+h2 {
+  font-size: 4rem;
+  line-height: 4.4rem;
+}
+@media screen and (max-width: 499px) {
+  /* line 125, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  h2 {
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+  }
+}
+
+/* line 131, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+h3 {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+@media screen and (max-width: 499px) {
+  /* line 131, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  h3 {
+    font-size: 2.2rem;
+    line-height: 2.4rem;
+  }
+}
+
+/* line 137, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+h4 {
+  font-size: 1.8rem;
+  line-height: 2rem;
+}
+
+/* line 140, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+a {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+/* line 143, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.text-primary, .text-secondary {
+  letter-spacing: 0.4;
+  line-height: 3.2rem;
+  font-size: 1.85rem;
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* line 150, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.text-primary {
+  font-family: "Georgia", serif;
+  font-style: italic;
+}
+
+/* line 153, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+h2.hl {
+  color: #E0AF1D;
+  font-weight: bold;
+}
+
+/* line 157, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.button {
+  border: none;
+  padding: 10px 12px 8px 12px;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  cursor: pointer;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 1.2px;
+}
+
+/* line 165, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.button--primary {
+  border: 2px solid #E0AF1D;
+  background: #E0AF1D;
+  color: white;
+}
+
+/* line 169, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.button--primary:hover {
+  background: white;
+  color: #E0AF1D;
+}
+
+/* line 172, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.button--edit {
+  border: 2px solid #16a085;
+  background: #16a085;
+  color: white;
+}
+
+/* line 176, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.button--edit:hover {
+  background: white;
+  color: #16a085;
+}
+
+/* line 179, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.button--danger {
+  border: 2px solid #c0392b;
+  background: #c0392b;
+  color: white;
+}
+
+/* line 183, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.button--danger:hover {
+  background: white;
+  color: #c0392b;
+}
+
+/* line 188, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.logo-main {
+  width: 240px;
+}
+
+/* line 190, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+nav {
+  background: #251439;
+  padding: 12px 0;
+  width: 100%;
+  z-index: 10;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 196, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .wrapper {
+    margin: 0;
+    padding: 0 20px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 196, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .wrapper {
+    margin: 0;
+    padding: 0 20px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 196, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .wrapper {
+    margin: 0;
+    padding: 0 20px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 201, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav a.col--two {
+    width: 80% !important;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 201, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav a.col--two {
+    width: 80% !important;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 201, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav a.col--two {
+    width: 80% !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 204, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .menu--main {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 204, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .menu--main {
+    display: none;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 204, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .menu--main {
+    display: none;
+  }
+}
+/* line 208, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 208, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul {
+    position: absolute;
+    background: #251439;
+    top: 55px;
+    margin: 0;
+    padding: 40px 0 20px;
+    width: 100% !important;
+    left: 0;
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 208, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul {
+    position: absolute;
+    background: #251439;
+    top: 55px;
+    margin: 0;
+    padding: 40px 0 20px;
+    width: 100% !important;
+    left: 0;
+    z-index: 1;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 208, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul {
+    position: absolute;
+    background: #251439;
+    top: 55px;
+    margin: 0;
+    padding: 40px 0 20px;
+    width: 100% !important;
+    left: 0;
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 221, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 221, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 221, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* line 226, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+nav ul a {
+  text-decoration: none;
+  color: white;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 226, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul a {
+    padding: 20px;
+    display: block;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 226, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul a {
+    padding: 20px;
+    display: block;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 226, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul a {
+    padding: 20px;
+    display: block;
+  }
+}
+/* line 235, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+nav ul a:hover {
+  color: #E0AF1D;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 235, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul a:hover {
+    background: #E0AF1D;
+    color: white;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 235, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul a:hover {
+    background: #E0AF1D;
+    color: white;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 235, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav ul a:hover {
+    background: #E0AF1D;
+    color: white;
+  }
+}
+/* line 240, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+nav .main--toggle {
+  display: none;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 240, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle {
+    float: right;
+    display: block;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    padding: 12px 0 18px;
+  }
+  /* line 248, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle:hover:before {
+    -webkit-transform: translate3d(0, -1px, 0);
+            transform: translate3d(0, -1px, 0);
+  }
+  /* line 250, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle:hover:after {
+    -webkit-transform: translate3d(0, 1px, 0);
+            transform: translate3d(0, 1px, 0);
+  }
+  /* line 252, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle:before, nav .main--toggle:after {
+    content: " ";
+    width: 32px;
+    height: 2px;
+    background: white;
+    display: block;
+    margin-top: 6px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  /* line 261, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle span {
+    width: 32px;
+    height: 2px;
+    margin-top: 6px;
+    display: block;
+    background: white;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 240, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle {
+    float: right;
+    display: block;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    padding: 12px 0 18px;
+  }
+  /* line 248, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle:hover:before {
+    -webkit-transform: translate3d(0, -1px, 0);
+            transform: translate3d(0, -1px, 0);
+  }
+  /* line 250, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle:hover:after {
+    -webkit-transform: translate3d(0, 1px, 0);
+            transform: translate3d(0, 1px, 0);
+  }
+  /* line 252, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle:before, nav .main--toggle:after {
+    content: " ";
+    width: 32px;
+    height: 2px;
+    background: white;
+    display: block;
+    margin-top: 6px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  /* line 261, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle span {
+    width: 32px;
+    height: 2px;
+    margin-top: 6px;
+    display: block;
+    background: white;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 240, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle {
+    float: right;
+    display: block;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    padding: 12px 0 18px;
+  }
+  /* line 248, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle:hover:before {
+    -webkit-transform: translate3d(0, -1px, 0);
+            transform: translate3d(0, -1px, 0);
+  }
+  /* line 250, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle:hover:after {
+    -webkit-transform: translate3d(0, 1px, 0);
+            transform: translate3d(0, 1px, 0);
+  }
+  /* line 252, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle:before, nav .main--toggle:after {
+    content: " ";
+    width: 32px;
+    height: 2px;
+    background: white;
+    display: block;
+    margin-top: 6px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  /* line 261, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle span {
+    width: 32px;
+    height: 2px;
+    margin-top: 6px;
+    display: block;
+    background: white;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 268, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active {
+    padding: 11px 0 17px;
+  }
+  /* line 271, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active span {
+    opacity: 0;
+    width: 28px;
+    height: 4px;
+    -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+            transform: translate3d(0, 0, 0) rotate(45deg);
+  }
+  /* line 276, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active:before {
+    -webkit-transform: translate3d(0, 8px, 0) rotate(45deg);
+            transform: translate3d(0, 8px, 0) rotate(45deg);
+    width: 22px;
+    height: 2px;
+  }
+  /* line 280, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active:after {
+    -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+            transform: translate3d(0, -10px, 0) rotate(-45deg);
+    width: 22px;
+    height: 2px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 268, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active {
+    padding: 11px 0 17px;
+  }
+  /* line 271, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active span {
+    opacity: 0;
+    width: 28px;
+    height: 4px;
+    -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+            transform: translate3d(0, 0, 0) rotate(45deg);
+  }
+  /* line 276, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active:before {
+    -webkit-transform: translate3d(0, 8px, 0) rotate(45deg);
+            transform: translate3d(0, 8px, 0) rotate(45deg);
+    width: 22px;
+    height: 2px;
+  }
+  /* line 280, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active:after {
+    -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+            transform: translate3d(0, -10px, 0) rotate(-45deg);
+    width: 22px;
+    height: 2px;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 268, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active {
+    padding: 11px 0 17px;
+  }
+  /* line 271, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active span {
+    opacity: 0;
+    width: 28px;
+    height: 4px;
+    -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+            transform: translate3d(0, 0, 0) rotate(45deg);
+  }
+  /* line 276, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active:before {
+    -webkit-transform: translate3d(0, 8px, 0) rotate(45deg);
+            transform: translate3d(0, 8px, 0) rotate(45deg);
+    width: 22px;
+    height: 2px;
+  }
+  /* line 280, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  nav .main--toggle.active:after {
+    -webkit-transform: translate3d(0, -10px, 0) rotate(-45deg);
+            transform: translate3d(0, -10px, 0) rotate(-45deg);
+    width: 22px;
+    height: 2px;
+  }
+}
+
+/* line 285, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.video-container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 40px 0 40px 0;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+@media screen and (max-width: 499px) {
+  /* line 285, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .video-container {
+    padding: 80px 0 40px 0;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 285, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .video-container {
+    padding: 80px 0 40px 0;
+  }
+}
+/* line 296, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.video-container video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  z-index: -10;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-size: cover;
+  -webkit-transition: 1s opacity;
+  transition: 1s opacity;
+}
+
+/* line 310, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+header {
+  color: white;
+}
+/* line 314, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+header h2 {
+  text-align: left;
+  margin: 0 0 12px;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 499px) {
+  /* line 314, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  header h2 {
+    margin-right: 10px;
+  }
+}
+/* line 320, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+header .arrow {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+}
+/* line 325, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+header .arrow img {
+  width: 50px;
+}
+/* line 328, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+header .wrapper {
+  height: 90vh;
+  position: relative;
+}
+@media screen and (max-width: 499px) {
+  /* line 328, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  header .wrapper {
+    height: 80vh;
+  }
+}
+/* line 333, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+header .wrapper .header--text {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+}
+@media screen and (max-width: 499px) {
+  /* line 333, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  header .wrapper .header--text {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* line 342, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.about {
+  background-color: white;
+}
+/* line 344, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.about .text-primary {
+  margin-bottom: 140px;
+}
+@media screen and (max-width: 499px) {
+  /* line 344, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .about .text-primary {
+    margin-bottom: 80px;
+  }
+}
+/* line 349, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.about .col--two:nth-of-type(2n + 2) {
+  padding: 0 30px;
+}
+@media screen and (max-width: 499px) {
+  /* line 349, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .about .col--two:nth-of-type(2n + 2) {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 353, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .about .col--two:nth-of-type(2n + 1) {
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 22px;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 353, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .about .col--two:nth-of-type(2n + 1) {
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 22px;
+  }
+}
+/* line 358, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.about .wrapper--flex {
+  margin-bottom: 60px;
+}
+/* line 360, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.about .wrapper--flex:nth-of-type(2) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+/* line 363, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.about .wrapper--flex:nth-of-type(2) .col--two:nth-of-type(2n + 2) {
+  padding-left: 0;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 363, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .about .wrapper--flex:nth-of-type(2) .col--two:nth-of-type(2n + 2) {
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 363, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .about .wrapper--flex:nth-of-type(2) .col--two:nth-of-type(2n + 2) {
+    padding: 0;
+  }
+}
+
+/* line 371, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.people {
+  background: #F7F7F7;
+}
+/* line 373, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.people img {
+  border-radius: 50%;
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+/* line 380, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.people .wrapper--flex:nth-of-type(1) {
+  margin-bottom: 60px;
+}
+/* line 382, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.people .wrapper--flex:nth-of-type(1) .col--img {
+  padding-left: 80px;
+}
+/* line 384, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.people .wrapper--flex:nth-of-type(2) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+/* line 386, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.people .wrapper--flex:nth-of-type(2) .col--img {
+  padding-right: 80px;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 388, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .people .wrapper--flex .col--img {
+    padding: 0 !important;
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 388, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .people .wrapper--flex .col--img {
+    padding: 0 !important;
+    margin: 20px;
+  }
+}
+
+/* line 394, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.services {
+  background-color: white;
+}
+/* line 396, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.services h2 {
+  text-align: center;
+}
+/* line 398, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.services h3 {
+  margin: 0 0 18px 0;
+}
+@media screen and (max-width: 499px) {
+  /* line 398, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .services h3 {
+    text-align: center;
+  }
+}
+/* line 402, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.services .text-secondary {
+  margin-bottom: 80px;
+}
+/* line 404, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.services i {
+  height: 60px;
+  width: 60px;
+  border: 2px solid #E0AF1D;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 20px;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  cursor: pointer;
+}
+@media screen and (max-width: 499px) {
+  /* line 404, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .services i {
+    margin: 0 auto 20px;
+  }
+}
+/* line 418, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.services .wrapper--flex {
+  width: 80%;
+  margin: 0 auto 48px;
+}
+/* line 421, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.services .wrapper--flex p {
+  color: #666666;
+}
+/* line 423, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.services .wrapper--flex div {
+  width: calc(100% - 100px);
+}
+@media screen and (max-width: 499px) {
+  /* line 423, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .services .wrapper--flex div {
+    width: 100%;
+  }
+}
+
+/* line 428, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+section.social {
+  padding: 0;
+  background-color: #0B0B0B;
+}
+
+/* line 431, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.social-element {
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/* line 434, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.social-element:nth-of-type(2n+5) {
+  background-color: #F9C320;
+}
+/* line 436, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.social-element:nth-of-type(8n+1) {
+  background-color: #E0AF1D;
+}
+/* line 438, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.social-element:nth-of-type(3) {
+  background-color: #AD8716;
+}
+/* line 440, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.social-element:nth-of-type(6) {
+  -webkit-box-ordinal-group: 8;
+      -ms-flex-order: 7;
+          order: 7;
+}
+/* line 442, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.social-element:nth-of-type(7) {
+  -webkit-box-ordinal-group: 7;
+      -ms-flex-order: 6;
+          order: 6;
+}
+/* line 444, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.social-element:nth-of-type(8) {
+  -webkit-box-ordinal-group: 10;
+      -ms-flex-order: 9;
+          order: 9;
+}
+/* line 446, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.social-element:nth-of-type(9) {
+  -webkit-box-ordinal-group: 9;
+      -ms-flex-order: 8;
+          order: 8;
+}
+/* line 448, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.social-element:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 453, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(1) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  /* line 455, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(2) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  /* line 457, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(3) {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  /* line 459, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(4) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  /* line 461, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(5) {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  /* line 463, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(6) {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+  /* line 465, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(7) {
+    -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+            order: 7;
+  }
+  /* line 467, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(8) {
+    -webkit-box-ordinal-group: 9;
+        -ms-flex-order: 8;
+            order: 8;
+  }
+  /* line 469, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(9) {
+    -webkit-box-ordinal-group: 10;
+        -ms-flex-order: 9;
+            order: 9;
+  }
+  /* line 471, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(10) {
+    display: none;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 453, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(1) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  /* line 455, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(2) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  /* line 457, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(3) {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  /* line 459, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(4) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  /* line 461, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(5) {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  /* line 463, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(6) {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+  /* line 465, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(7) {
+    -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+            order: 7;
+  }
+  /* line 467, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(8) {
+    -webkit-box-ordinal-group: 9;
+        -ms-flex-order: 8;
+            order: 8;
+  }
+  /* line 469, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(9) {
+    -webkit-box-ordinal-group: 10;
+        -ms-flex-order: 9;
+            order: 9;
+  }
+  /* line 471, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(10) {
+    display: none;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 475, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(1) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  /* line 477, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(2) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  /* line 479, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(3) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  /* line 481, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(4) {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  /* line 483, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(5) {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  /* line 485, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(6) {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+  /* line 487, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(7) {
+    -webkit-box-ordinal-group: 9;
+        -ms-flex-order: 8;
+            order: 8;
+  }
+  /* line 489, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(8) {
+    -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+            order: 7;
+  }
+  /* line 491, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(9) {
+    -webkit-box-ordinal-group: 10;
+        -ms-flex-order: 9;
+            order: 9;
+  }
+  /* line 493, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element:nth-of-type(10) {
+    -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
+            order: 10;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  /* line 495, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .social-element.col--four {
+    width: 50% !important;
+  }
+}
+
+/* line 498, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.instagram {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* line 505, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.wrapper--flex.tweet-flex {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/* line 507, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.tweet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  padding: 0 20px;
+  height: 80%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: white;
+  font-size: 16px;
+  font-family: "Georgia";
+}
+/* line 521, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.tweet p {
+  line-height: 28px;
+}
+@media screen and (min-width: 960px) and (max-width: 1169px) {
+  /* line 507, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet {
+    padding: 0px 15px;
+    height: 80%;
+  }
+  /* line 526, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet p {
+    line-height: 18px;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 507, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet {
+    padding: 0px 15px;
+    height: 80%;
+  }
+  /* line 526, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet p {
+    line-height: 18px;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 507, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet {
+    padding: 0 15px;
+    height: 90%;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 507, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet {
+    padding: 0 15px;
+    height: 90%;
+  }
+}
+/* line 532, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.tweet a {
+  color: white;
+  font-weight: bold;
+  word-break: break-all;
+  display: inline-block;
+}
+/* line 538, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.tweet p {
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 18px;
+}
+@media screen and (min-width: 960px) and (max-width: 1169px) {
+  /* line 538, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet p {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 538, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet p {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 538, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 538, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .tweet p {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+}
+
+/* line 554, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.square {
+  position: relative;
+  border: 2px solid black;
+}
+
+/* line 558, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+/* line 564, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.facebook {
+  background: #F7F7F7;
+}
+/* line 566, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.facebook .wrapper--flex {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+              -ms-grid-row-align: flex-start;
+          align-items: flex-start;
+}
+/* line 568, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.facebook .col--two {
+  width: 46%;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 568, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .facebook .col--two {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 568, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .facebook .col--two {
+    width: 100%;
+  }
+}
+/* line 572, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.facebook img {
+  max-width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 572, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .facebook img {
+    height: 200px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 572, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .facebook img {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 572, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .facebook img {
+    height: 200px;
+  }
+}
+/* line 578, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.facebook a {
+  color: #111;
+}
+/* line 580, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.facebook a:hover {
+  color: #E0AF1D;
+}
+/* line 582, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.facebook p {
+  margin-bottom: 0;
+  word-break: break-word;
+}
+
+/* line 587, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.contact {
+  background-color: white;
+  background: #E0AF1D;
+  padding: 0;
+}
+/* line 591, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.contact .wrapper--flex {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+              -ms-grid-row-align: stretch;
+          align-items: stretch;
+}
+/* line 593, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.contact .contact--info {
+  text-align: center;
+  padding: 80px 0;
+}
+/* line 596, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.contact .contact--info p {
+  margin: 0 0 8px 0;
+}
+/* line 598, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.contact .contact--info div:first-of-type {
+  margin-bottom: 30px;
+}
+/* line 600, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.contact .contact--map {
+  background: url(/assets/map-with-marker-ba99a03f7090cb10ecf277620e61da41001d566114d861b8f586f425a13b5f70.png) center;
+  background-size: cover;
+  position: relative;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 600, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .contact .contact--map {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 600, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .contact .contact--map {
+    height: 400px;
+  }
+}
+/* line 606, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.contact .contact--map a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 613, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request {
+  background-color: white;
+}
+/* line 615, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form, .request h2 {
+  width: 80%;
+  margin: 0 auto;
+}
+/* line 618, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request h2 {
+  margin-bottom: 3.2rem;
+}
+/* line 621, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #f5e7bb inset;
+}
+/* line 623, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form label {
+  font-size: 13px;
+  text-transform: uppercase;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  font-weight: normal;
+}
+/* line 628, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form textarea {
+  border: 2px solid black;
+  width: 100%;
+}
+/* line 631, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form input[type=submit] {
+  float: right;
+}
+/* line 633, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form .comments-label {
+  padding-left: 6px;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 633, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .request form .comments-label {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 633, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .request form .comments-label {
+    padding-left: 0;
+  }
+}
+/* line 637, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form .col--two {
+  position: relative;
+}
+/* line 639, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form .col--two label {
+  position: absolute;
+  top: 0;
+  left: 6px;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 639, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .request form .col--two label {
+    left: 0;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 639, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .request form .col--two label {
+    left: 0;
+  }
+}
+/* line 645, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form .col--two input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+/* line 651, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form .col--two:nth-of-type(2n + 1) {
+  padding-right: 10px;
+}
+/* line 653, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form .col--two:nth-of-type(2n + 2) {
+  padding-left: 10px;
+}
+/* line 655, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.request form .col--two:nth-of-type(2n + 2) label {
+  left: 16px;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 655, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .request form .col--two:nth-of-type(2n + 2) label {
+    left: 0;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 655, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .request form .col--two:nth-of-type(2n + 2) label {
+    left: 0;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 659, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .request form .col--two:nth-of-type(2n + 2), .request form .col--two:nth-of-type(2n + 1) {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 659, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  .request form .col--two:nth-of-type(2n + 2), .request form .col--two:nth-of-type(2n + 1) {
+    padding: 0;
+  }
+}
+
+/* line 663, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+footer {
+  background: #251439;
+  color: white;
+  padding: 18px 0;
+}
+/* line 667, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+footer .logo-footer {
+  width: 80px;
+  margin-right: 30px;
+}
+/* line 670, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+footer h3 {
+  font-size: 2rem;
+  margin: 0 0 12px;
+}
+/* line 673, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+footer p {
+  font-family: "Georgia", serif;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+/* line 677, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+footer div {
+  width: calc(80% - 110px);
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 677, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  footer div {
+    width: calc(100% - 110px);
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 677, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  footer div {
+    width: calc(100% - 110px);
+  }
+}
+/* line 681, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+footer div.social-links {
+  width: 20%;
+  text-align: right;
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 681, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  footer div.social-links {
+    width: calc(100% - 110px);
+    margin-left: 110px;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 681, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+  footer div.social-links {
+    width: calc(100% - 110px);
+    margin-left: 110px;
+    text-align: left;
+  }
+}
+/* line 688, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+footer div.social-links a {
+  color: white;
+  font-size: 2rem;
+  margin-right: 16px;
+}
+/* line 692, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+footer div.social-links a:hover {
+  color: #E0AF1D;
+}
+/* line 694, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+footer div.social-links a:last-of-type {
+  margin-right: 0;
+}
+
+/* line 696, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.login--wrapper {
+  max-width: 400px;
+}
+/* line 698, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.login--wrapper input[type="email"], .login--wrapper input[type="password"] {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+/* line 702, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/home.sass */
+.login--wrapper input[type="submit"] {
+  width: 100%;
+}
+
+/* line 19, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/* line 22, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--wrapper a {
+  width: 32%;
+  margin-right: calc( (100% - (32% * 3)) / 2 );
+  background: #0B0B0B;
+  margin-bottom: calc( (100% - (32% * 3)) / 2 );
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  /* line 22, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+  .blog--wrapper a {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 499px) {
+  /* line 22, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+  .blog--wrapper a {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+/* line 30, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--wrapper a:nth-of-type(3n + 3) {
+  margin-right: 0;
+}
+/* line 32, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--wrapper a:nth-of-type(1), .blog--wrapper a:nth-of-type(2), .blog--wrapper a:nth-of-type(3) {
+  margin-top: calc( (100% - (32% * 3)) / 2 );
+}
+/* line 34, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--wrapper img {
+  width: 100%;
+}
+/* line 36, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--wrapper figure {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/* line 43, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--wrapper figure:hover figcaption {
+  opacity: 1;
+}
+/* line 45, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--wrapper figure figcaption {
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(37, 20, 57, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0;
+}
+/* line 55, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--wrapper figure figcaption h2 {
+  margin: auto;
+  color: white;
+  font-weight: 100;
+  font-size: 28px;
+}
+
+/* line 60, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--title {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+/* line 64, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog-single--wrapper {
+  max-width: 800px;
+  margin-top: 60px;
+  margin-bottom: 80px;
+  font-size: 18px;
+  line-height: 28px;
+}
+/* line 70, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog-single--wrapper a {
+  -webkit-transition: 0.1s all ease;
+  transition: 0.1s all ease;
+  color: #333;
+  border-bottom: 2px solid rgba(224, 175, 29, 0.8);
+  box-shadow: inset 0 -4px 0 rgba(224, 175, 29, 0.8);
+}
+/* line 75, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog-single--wrapper a:hover {
+  background: rgba(224, 175, 29, 0.8);
+}
+/* line 77, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog-single--wrapper .blog-single--title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+/* line 80, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog-single--wrapper .blog-single--title h2 {
+  margin-top: 40px;
+}
+/* line 82, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog-single--wrapper .blog-single--title img {
+  max-width: 600px;
+}
+
+/* line 84, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/* line 90, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--list li {
+  width: calc(100% / 6);
+  padding: 10px;
+  padding-top: 30px;
+}
+
+/* line 94, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--list-header, .blog--list-body li {
+  border-bottom: 1px solid #DDD;
+}
+
+/* line 96, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.edit_blog {
+  margin-bottom: 80px;
+}
+
+/* line 98, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--edit-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 104, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--title-field {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+/* line 106, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--title-field input {
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* line 111, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--form .wrapper--flex {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center;
+}
+/* line 113, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog--form .button--submit {
+  margin-left: 12px;
+}
+
+/* line 115, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+blockquote {
+  border-left: 0px;
+  color: #251439;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 38px;
+  width: 80%;
+  position: relative;
+  margin-bottom: 0;
+}
+/* line 125, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+blockquote:before {
+  content: "“";
+  position: absolute;
+  font-size: 200px;
+  color: rgba(37, 20, 57, 0.1);
+  z-index: -1;
+  top: 68px;
+  left: -26px;
+}
+
+/* line 134, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.pagination {
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  font-size: 18px;
+  display: block;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* line 141, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/blogs.sass */
+.blog-thumbnail {
+  width: 200px;
+  margin-bottom: 40px;
+}
+
+/* line 22, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/application.scss */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/* line 54, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/application.scss */
+.toggleCheckbox {
+  display: block;
+  overflow: hidden;
+}
+/* line 58, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/application.scss */
+.toggleCheckbox__wrap {
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #BBB;
+  position: relative;
+  border-radius: 20px;
+  color: #FFF;
+  overflow: hidden;
+  box-shadow: 0 1px 0 #CCC, 1px 3px 4px rgba(0, 0, 0, 0.5) inset;
+  white-space: nowrap;
+  font-size: 11px;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+}
+/* line 79, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/application.scss */
+.toggleCheckbox__handle {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  left: 0;
+  background: #F1F1F1;
+  border-radius: 20px;
+  font-weight: normal;
+}
+/* line 80, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/application.scss */
+.toggleCheckbox__handle::before, .toggleCheckbox__handle::after {
+  position: absolute;
+  opacity: .7;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+/* line 81, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/application.scss */
+.toggleCheckbox__handle::after {
+  left: 0;
+  color: #777;
+}
+/* line 82, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/application.scss */
+.toggleCheckbox__handle::before {
+  right: 0;
+}
+/* line 94, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/application.scss */
+.toggleCheckbox input {
+  position: absolute;
+  z-index: -1;
+  left: -999em;
+}
+/* line 95, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/application.scss */
+.toggleCheckbox input:focus ~ b {
+  background: white;
+}
+/* line 96, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/application.scss */
+.toggleCheckbox input:checked ~ b {
+  left: 100%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+/* line 100, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/application.scss */
+.toggleCheckbox:hover .toggleCheckbox__handle {
+  background: #FFF;
+}
+/* line 101, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/application.scss */
+.toggleCheckbox:hover .toggleCheckbox__handle::before, .toggleCheckbox:hover .toggleCheckbox__handle::after {
+  opacity: 1;
+}
+/* line 32, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/application.scss */
+.toggleCheckbox__wrap {
+  width: 65px;
+  height: 25px;
+  line-height: 22px;
+  text-align: left;
+}
+/* line 39, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/application.scss */
+.toggleCheckbox__handle {
+  height: 25px;
+  line-height: 25px;
+  width: 25px;
+  border-radius: 25px;
+  box-shadow: 0 0 3px #888, -45px 0 0 32.5px rgba(30, 100, 255, 0.75), 45px 0 0 32.5px rgba(240, 240, 240, 0.75);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+/* line 40, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/application.scss */
+.toggleCheckbox__handle::before {
+  right: 30px;
+  content: "YES";
+}
+/* line 41, /Users/trudymacnabb/Code/triumph-site/app/assets/stylesheets/application.scss */
+.toggleCheckbox__handle::after {
+  left: 30px;
+  content: "NO";
+}
