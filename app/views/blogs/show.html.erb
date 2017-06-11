@@ -3,7 +3,13 @@
 		<img src="<%= @blog.gram_photo%>" alt="">
 		<h2><%= @blog.title %></h2>
 	</div>
-	<%= @blog.content.try(:html_safe) %>
+
+	<% if @blog.external_link %>
+		<h3>External Link to:</h3>
+		<%= link_to @blog.external_link_url, @blog.external_link_url,  target: '_blank' %>
+	<% else %>
+		<%= @blog.content.try(:html_safe) %>
+	<% end %>
 </div>
 
 

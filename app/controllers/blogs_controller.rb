@@ -5,7 +5,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    @blogs = Blog.paginate(:page => params[:page], :per_page => 5).order('created_at DESC') #.order(:created_at).reverse
   end
 
   # GET /blogs/1
@@ -70,6 +70,6 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :content, :published)
+      params.require(:blog).permit(:title, :content, :published, :external_link, :external_link_url)
     end
 end

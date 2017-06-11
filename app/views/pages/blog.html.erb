@@ -3,7 +3,10 @@
 </div>
 <div class="wrapper blog--wrapper">
 	<% @blogs.each do |blog|%>
-		<%= link_to blog do %>
+
+		<% used_link = blog.external_link ? blog.external_link_url :  blog %>
+
+		<%= link_to used_link, target:'_blank' do %>
 			<figure>
 				<img src="<%= blog.gram_photo%>" alt="">
 				<figcaption>
@@ -13,3 +16,5 @@
 		<% end %>
 	<% end %>
 </div> 
+
+<%= will_paginate @blogs %>

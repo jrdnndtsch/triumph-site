@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="wrapper">
-  <h1>Listing Blogs</h1>
+  <h1 class="text-center">All Blogs</h1>
   <ul class="blog--list blog--list-header">
     <li>image</li>
     <li>title</li>
@@ -12,12 +12,15 @@
       <li><img src="<%= blog.gram_photo%>" alt=""></li>
       <li><%= blog.title %></li>
       <li><%= blog.published%></li>
-      <li><%= link_to 'Show', blog %></li>
-      <li><%= link_to 'Edit', edit_blog_path(blog) %></li>
-      <li><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+      <li><%= link_to 'Show', blog, class: 'button button--primary' %></li>
+      <li><%= link_to 'Edit', edit_blog_path(blog), class: 'button button--edit' %></li>
+      <li><%= link_to 'Delete', blog, class: 'button button--danger',method: :delete, data: { confirm: 'Are you sure?' } %></li>
     <% end %>
   </ul>
 
+  <%= will_paginate @blogs %>
 
-  <%= link_to 'New Blog', new_blog_path %>
+  <br>
+
+  <%= link_to 'New Blog', new_blog_path, class: 'button button--primary' %>
 </div>

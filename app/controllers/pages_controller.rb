@@ -25,6 +25,7 @@ class PagesController < ApplicationController
   end
 
   def blog
-    @blogs = Blog.is_published
+    @blogs = Blog.paginate(:page => params[:page], :per_page => 9).is_published.order('created_at DESC')
+    # @used_link = @blogs.first.external_link ? ERB.new('<%= link_to blog.external_link_url, target: "_blank" do %>') : ERB.new("<%= link_to blog, target:'_blank' do %>")
   end
 end

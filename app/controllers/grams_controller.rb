@@ -68,6 +68,7 @@ class GramsController < ApplicationController
 
   def upload  
     @instas = Instagram.user_recent_media(@triumph_capital, {:count => 15})
+    raise 'hell'
     @instas.first(5).each_with_index do |insta, index|
       index_plus_one = index + 1
       this_insta = Gram.where(id: index_plus_one).first_or_initialize({text: insta.caption.text, image_url: insta.images.standard_resolution.url})

@@ -16,7 +16,7 @@ task :update_feed => :environment do
 	  this_insta.save
 	end 
   #pull in instas for blogs
-  @instas.each do |insta|
+  @instas.reverse.each do |insta|
     image_url = insta.images.standard_resolution.url
     if !Blog.where(gram_photo: image_url).present?
       Blog.create(gram_photo: image_url)
