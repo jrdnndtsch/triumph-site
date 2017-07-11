@@ -11,6 +11,6 @@ class RequestedQuoteMailer < ApplicationMailer
     @phone = phone
     @comment = comment
     # mg_client = Mailgun::Client.new ENV['api_key']
-    mail to: "hello@upatfive.ca"
+    mail to: "diana.dyer@triumphant.ca"
   end
 end
