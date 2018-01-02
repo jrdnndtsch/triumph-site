@@ -187,6 +187,7 @@ h2.hl
 // NAV
 .logo-main
 	:width 240px
+
 nav 
 	:background $purple
 	:padding 12px 0
@@ -237,6 +238,12 @@ nav
 			+display-for(md sm xs)
 				:background $gold
 				:color white
+	.social-links 
+		a
+			:margin-right 8px
+			:font-size 18px
+		a:hover, a:active 
+			:color $gold
 	.main--toggle
 		:display none
 		+display-for(md sm xs)
@@ -689,7 +696,7 @@ footer
 			:color white
 			:font-size 2rem
 			:margin-right 16px
-		a:hover 
+		a:hover, a:active 
 			:color $gold	
 		a:last-of-type
 			:margin-right 0	

@@ -11,7 +11,7 @@
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.png' %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <script src="https://use.fontawesome.com/af8077e440.js"></script>
   <!-- for facebook -->
   <meta property="og:title" content="Triumph Capital Limited" />
   <meta property="og:image" content="<%= asset_path('social-img.png')%>" />
@@ -37,6 +37,17 @@
         <li><%= link_to 'Contact', root_path(:anchor => 'contact')%></li>
         <li><%= link_to 'Blog', blog_home_path%></li>
         <li><%= link_to 'Request a Consultation', root_path(:anchor => 'request')%></li>
+        <li><div class="social-links">
+          <a href="https://www.facebook.com/Triumph-Capital-Limited-656977831072525" target="_blank">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="https://twitter.com/triumphTO" target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/triumphcap/" target="_blank">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </div></li>
         <% if user_signed_in? %>
           <li><%= link_to 'Edit Blogs', blogs_path %></li>
           <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
@@ -47,7 +58,29 @@
 
   <%= yield %>
 
-  <script src="https://use.fontawesome.com/af8077e440.js"></script>
+  
+
+  <footer>
+    <div class="wrapper wrapper--flex">
+      <%= image_tag 'logo-2.png', class:'logo-footer'%>
+        <div>
+          <h3>Financial Advice for Today and For the Future.</h3>
+          <p>Copyright © 2016 Triumph Capital Limited. All Rights Reserved. Developed by Up At Five Triumph Capital Limited |
+            171 East Liberty Street Suite 272 Toronto, ON M6K 3P6 | (647) 345-0611 | 1-888-315-7781</p>
+        </div>
+        <div class="social-links">
+          <a href="https://www.facebook.com/Triumph-Capital-Limited-656977831072525" target="_blank">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="https://twitter.com/triumphTO" target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/triumphcap/" target="_blank">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </div>
+    </div>
+  </footer>
 
  <script>
 
