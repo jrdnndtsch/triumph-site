@@ -97,6 +97,10 @@ $grid-base: 40
 		&--two
 			+make-column(20)
 			+display-for(sm xs)
+				+make-column(40)
+		&--three
+			+make-column(26)
+			+display-for(sm xs)
 				+make-column(40)	
 		&--four
 			+make-column(10)
@@ -701,7 +705,8 @@ footer
 		a:last-of-type
 			:margin-right 0	
 .login--wrapper
-	:max-width 400px			
+	:max-width 400px
+	:margin-bottom 100px			
 	input[type="email"], input[type="password"]
 		:width 100%
 		:border 1px solid #ddd
