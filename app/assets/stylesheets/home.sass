@@ -443,11 +443,14 @@ section.social
 	:position relative
 	:justify-content center
 	&:nth-of-type(2n+5)
-		:background-color $lightgold
+		// :background-color $lightgold
+		:background-color $purple
 	&:nth-of-type(8n+1)
-		:background-color $gold
+		// :background-color $gold
+		:background-color $purple
 	&:nth-of-type(3)
-		:background-color $darkgold
+		// :background-color $darkgold
+		:background-color $purple
 	&:nth-of-type(6)
 		:order 7
 	&:nth-of-type(7)
@@ -530,7 +533,9 @@ section.social
 	:font-size 16px
 	:font-family 'Georgia'
 	p 
-		:line-height 28px
+		:line-height 1.2
+		:font-family 'PT Sans Narrow', sans-serif
+		:letter-spacing 0.8px
 	+display-for(lg md)
 		:padding 0px 15px
 		:height 80%
@@ -674,6 +679,8 @@ section.social
 	:background-color white	
 	.wrapper 
 		:width 60%
+		+display-for(sm xs)
+			:width 100%
 	img 
 		:padding-bottom 30px
 	a 
